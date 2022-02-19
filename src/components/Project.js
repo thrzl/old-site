@@ -1,35 +1,22 @@
 // import { Octokit } from "@octokit/rest";
-import {Card} from "@geist-ui/core"
-import GitHub from "github-api"
+import { Card } from "@geist-ui/core";
+import axios from "axios";
 
-let gh = new GitHub();
+export default async function project() {
+  await axios
+    .get("https://api.github.com/repos/terabyte3/crust")
+    .then((res) => {
+      let array = [res.data.full_name, res.data.description];
+      // array[0] gets the full name of the repo
+      // array[1] gets the description of the repo
+      // console.log(array[0] + "\n" + array[1]);
 
-
-let rname = "error occurred"
-let rdesc = "error, please try again";
-function Project(d) {
-    let name = d["name"]
-    let repo = gh.getRepo("terabyte3", name)
-    function changername(data) {
-        rname = data.full_name
-        rdesc = data.description
-        console.log(rname)
-        return rname
-    }
-    let rinfo = repo.getDetails().then((info) => {
-        rname = info.data.full_name
-        rdesc = info.data.description
-        console.log(info.data)
-    })
-    console.log(`rdesc for ${d["name"]}: ${rdesc}`)
-    console.log(`rname for ${d["name"]}: ${rname}`)
-    console.log(rinfo)
-    return (
+      return (
         <Card shadow className="bg-slate-800">
-            <h4>{ `${rname}` }</h4>
-            <p>{ rdesc }</p>
+          <h4>{`${array[0]}`}</h4>
+          <p>{`${array[1]}`}</p>
         </Card>
-    )
+      );
+    })
+    .catch((e) => console.log(e));
 }
-
-export default Project
