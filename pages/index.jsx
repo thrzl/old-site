@@ -2,6 +2,7 @@
 // import "../styles/globals.css"
 import { useLanyard } from 'use-lanyard'
 import {Github, ZeroConfig, Square} from "@geist-ui/icons"
+import profilePic from '../public/logo192.png'
 
 import { GeistProvider, CssBaseline, Dot, Tooltip, Avatar } from '@geist-ui/core'
 import Image from 'next/image'
@@ -108,7 +109,7 @@ function App() {
         ` }</style> */}
         <h1 className="headertext font-bold sm:tagline text-gradient bg-gradient-to-r from-blue-500 to-purple-500 m-0 sm:text-small">
           <div className="rounded-full">
-            <img width="160px" height="160px" src={`https://cdn.discordapp.com/avatars/536644802595520534/${du.avatar}.webp?size=160`} className="rounded-full mx-auto my-auto w-fit relative" alt="profile"/>
+            <img width="160px" height="160px" src={du.avatar ? `https://cdn.discordapp.com/avatars/536644802595520534/${du.avatar}.webp?size=160` : profilePic} className="rounded-full mx-auto my-auto w-fit relative" alt="profile"/>
             heyo, i'm thrizzle
             <Tooltip portalClassName="tooltip-anim" text={status} type="dark" hideArrow>
               <Dot type={dottype}></Dot>
