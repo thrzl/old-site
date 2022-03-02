@@ -12,7 +12,7 @@ export default function Document() {
                 <script async defer data-website-id="c3365efa-8983-46d0-a970-54a52069d808" src="https://umami-production-678c.up.railway.app/umami.js"></script>
                 <script src="https://cdn.jsdelivr.net/gh/virae/we-stand-with-ukraine@v1.0.1/badge.js" async defer></script>
                 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-                <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" as="style" onload="this.onload=null,this.rel='stylesheet'"/>
+                <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" as="style" onLoad="this.onLoad=null,this.rel='stylesheet'"/>
             </Head>
             <Head />
             <body>

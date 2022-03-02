@@ -14,7 +14,10 @@ function App() {
   const { data: activity } = useLanyard("536644802595520534");
   console.info(activity)
   var dp;
-  var du;
+  var du = {
+    username: "api error",
+    discriminator: "0000"
+  };
   if (activity === undefined) {
     dp = "offline"
     du = "api error#0000"
@@ -97,7 +100,6 @@ function App() {
     }
     return null
   }
-
   return (
     <div className="App bg-slate-900">
       <header className="App-header">
@@ -109,15 +111,17 @@ function App() {
         ` }</style> */}
         <h1 className="headertext font-bold sm:tagline text-gradient bg-gradient-to-r from-blue-500 to-purple-500 m-0 sm:text-small">
           <div className="rounded-full">
-            <img width="160px" height="160px" src={du.avatar ? `https://cdn.discordapp.com/avatars/536644802595520534/${du.avatar}.webp?size=160` : profilePic} className="rounded-full mx-auto my-auto w-fit relative" alt="profile"/>
-            heyo, i'm thrizzle
-            <Tooltip portalClassName="tooltip-anim" text={status} type="dark" hideArrow>
+            <div className="w-full">
+              <Image width="160px" height="160px" src={du.avatar ? `https://cdn.discordapp.com/avatars/536644802595520534/${du.avatar}.webp?size=160` : profilePic} priority className="rounded-full mx-auto my-auto w-fit relative" alt="profile"/>
+            </div>
+            heyo, i'm terry
+            <Tooltip portalClassName="tooltip-anim" text={status} type="dark" hideArrow placement="right">
               <Dot type={dottype}></Dot>
             </Tooltip>
           </div>
         </h1>
         <a
-          className="App-link"
+          className="text-slate-400 transition-all ease-in-out duration-1000 text-md"
           href="https://discord.com/users/536644802595520534"
           target="_blank"
           rel="noopener noreferrer"
