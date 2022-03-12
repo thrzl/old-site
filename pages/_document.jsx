@@ -6,6 +6,7 @@ export default function Document() {
         <Html lang="en" className='bg-slate-900'>
             <Head>
                 {CssBaseline.flush()}
+                <title>thrizzle.</title>
                 <meta
                 name="description"
                 content="👋🏽 hey there!"

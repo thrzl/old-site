@@ -8,13 +8,10 @@ function Projects(d) {
        res.json()
      )
     )
-    console.log(data)
  
-    if (isLoading || !data) return <Loading type="points-opacity" color="secondary" lg="true"/>
+    if (isLoading || !data) return <Loading type="points-opacity" color="primary" lg="true"/>
   
     if (er) return alert('An error has occurred: ' + er.message)
-
-    console.log(`data: ${data.toString()}`)
     
     return (
       <>

@@ -4,7 +4,7 @@ import profilePic from '../public/logo192.png'
 import Image from 'next/image'
 import Projects from '../components/Projects'
 import Presence from '../components/Presence'
-import {Grid} from '@nextui-org/react'
+import {Grid, Loading} from '@nextui-org/react'
 
 function App() {
   var dottype = "error"
