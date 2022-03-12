@@ -16,38 +16,18 @@
   }
 }
 
-.skeleton {
-  opacity: .7;
-  animation: skeleton-loading 1s linear infinite alternate;
-}
-
-@keyframes skeleton-loading {
-  0% {
-    background-color: hsl(200, 20%, 70%);
-  }
-
-  100% {
-      background-color: hsl(200, 20%, 95%);
-    }
-}
-
 * {
   font-family: 'Poppins', sans-serif;
+  @apply selection:bg-gray-400
+  
 }
 
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.fontcalc {
+  font-size: calc(10px + 2vmin);
 }
 
 .App-header {
@@ -61,17 +41,4 @@
   font-size: calc(10px + 2vmin);
   color: white;
   max-width: 85vw
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.anchor > sup > span.badge {
-  background: none !important;
 }

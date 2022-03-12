@@ -1,18 +1,15 @@
-// import './App.css';
-// import "../styles/globals.css"
 import { useLanyard } from 'use-lanyard'
 import {Github, ZeroConfig, Square} from "@geist-ui/icons"
 import profilePic from '../public/logo192.png'
 
-import { GeistProvider, CssBaseline, Dot, Tooltip, Avatar } from '@geist-ui/core'
 import Image from 'next/image'
-
+// import Projects from '../components/Projects'
+import { Card } from '@nextui-org/react'
 
 function App() {
   var dottype = "error"
   var status = "api error"
   const { data: activity } = useLanyard("536644802595520534");
-  console.info(activity)
   var dp;
   var du = {
     username: "api error",
@@ -25,26 +22,7 @@ function App() {
     dp = activity.discord_status
     du = activity.discord_user
   }
-  switch (dp) {
-  case "online":
-    dottype = "success";
-    status = "online"
-    break;
-  case "offline":
-    dottype = null
-    status = "offline"
-    break;
-  case "idle":
-    dottype = "warning"
-    status = "idle"
-    break;
-    case "dnd":
-      dottype = "error"
-      status = "dnd"
-      break;
-  default:
-    break;
-  }
+  status = dp
   var p;
   if (activity && activity.activities.length > 0) {
     for (let i = 0; i < activity.activities.length; i++) {
@@ -67,7 +45,6 @@ function App() {
         } else {
           imgUrl = "https://raw.githubusercontent.com/NYRI4/Discolored/e0a63e07fbfee073483210feb7778245addb0ce2/assets/arcades.svg"
         }
-        console.log(imgUrl)
         p = {
           image: imgUrl,
           id: activity.activities[i].application_id,
@@ -83,51 +60,33 @@ function App() {
 
   function Presence(data) {
     let presence = data.presence
-    if (data.presence) { 
+    if (data.presence) {
       return (
-        <div className="p-5 mt-5 place-content-center rounded-lg bg-slate-800 shadow-lg hover:shadow-2xl transition-all ease-in-out duration-500">
+        <Card className="p-5 mt-5 place-content-center transition-all ease-in-out duration-500 no-repeat w-max bg-slate-800 border-0" shadow hoverable bordered={false}>
           <div className="flex justify-center presence">
-            {presence.assets && presence.assets.large_text ? <Tooltip text={p.large_text} hideArrow type="dark"> <Avatar isSquare src={p.image} width="100px" height="100px" /> </Tooltip> : <Image src={p.image} width="100px" height="100px" />}
+            <div className="hidden md:inline-block max-h-0">
+              <Image width="135px" height="135px" className="rounded-lg" src={p.image} layout="intrinsic"/>
+            </div>
             
             <div className="pl-5 place-content-start text-left">
-              <h3 className="mb-0.5">{p.name}</h3>
-              <h4 className="mb-0.5 font-normal">{p.details}</h4>
-              <h4 className="mb-0.5 font-normal">{p.state}</h4>
+              <h3 className="mb-0.5 font-bold">{p.name}</h3>
+              <h4 className="mb-0.5">{p.details}</h4>
+              <h4 className="mb-0.5">{p.state}</h4>
             </div>
           </div>
-        </div>
+        </Card>
       )
     }
     return null
   }
   return (
+    <>
     <div className="App bg-slate-900">
       <header className="App-header">
-        {/* <style data-styled-jsx>{`
-        .tooltip-anim {
-          transition: all ease-in-out;
-          transition-duration: 250ms;
-        }
-        ` }</style> */}
+        <Image width="160px" height="160px" src={du.avatar ? `https://cdn.discordapp.com/avatars/536644802595520534/${du.avatar}.webp?size=160` : profilePic} priority className="rounded-full m-auto w-fit relative" alt="profile"/>
         <h1 className="headertext font-bold sm:tagline text-gradient bg-gradient-to-r from-blue-500 to-purple-500 m-0 sm:text-small">
-          <div className="rounded-full">
-            <div className="w-full">
-              <Image width="160px" height="160px" src={du.avatar ? `https://cdn.discordapp.com/avatars/536644802595520534/${du.avatar}.webp?size=160` : profilePic} priority className="rounded-full mx-auto my-auto w-fit relative" alt="profile"/>
-            </div>
-            heyo, i'm terry
-            <Tooltip portalClassName="tooltip-anim" text={status} type="dark" hideArrow placement="right">
-              <Dot type={dottype}></Dot>
-            </Tooltip>
-          </div>
+          heyo, i'm thrizzle.
         </h1>
-        <a
-          className="text-slate-400 transition-all ease-in-out duration-1000 text-md"
-          href="https://discord.com/users/536644802595520534"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {du.username}#{du.discriminator}
-        </a>
         <Presence presence={p} />
         <div className="links mt-5 flex">
           <a href="https://github.com/terabyte3" className="text-white transition-all ease-in-out duration-1000 hover:scale-125 mx-3">
@@ -141,22 +100,22 @@ function App() {
           </a>
         </div>
       </header>
-      {/* <div className="bg-slate-900">
-        <Project name="terabyte3/crust"/>
-        <Project name="terabyte3/discord-ext-forms"/>
-        <Project name="ey3tech/vertigo"/>
-        <Project name="terabyte3/repltable"/>
+      {/* <div className='hidden md:flex mx-auto max-w-2xl min-h-screen content-center items-center align-middle fontcalc'>
+        <Grid.Container gap={2} justify="center">
+          <Projects/>
+        </Grid.Container>
       </div> */}
     </div>
+    </>
   );
 }
 
 function return_app() {
   return (
-    <GeistProvider>
-    <CssBaseline />
+    // <GeistProvider>
+    // <CssBaseline />
     <App />
-  </GeistProvider>
+  // </GeistProvider>
   )
 }
 
