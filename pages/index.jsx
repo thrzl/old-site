@@ -4,7 +4,7 @@ import profilePic from '../public/logo192.png'
 import Image from 'next/image'
 import Projects from '../components/Projects'
 import Presence from '../components/Presence'
-import {Grid, Loading} from '@nextui-org/react'
+import {Grid} from '@nextui-org/react'
 
 function App() {
   var dottype = "error"
@@ -78,12 +78,12 @@ function App() {
             <i class="bx bx-square-rounded h-full"></i>
           </a>
         </div>
+        <div className='hidden md:flex w-1/2 items-center'>
+          <Grid.Container gap={2} justify="center" wrap='wrap' className='max-w-3/4 p-5'>
+            <Projects/>
+          </Grid.Container>
+        </div>
       </header>
-      <div className='hidden md:flex mx-auto min-h-screen items-center'>
-        <Grid.Container gap={2} justify="center" wrap='wrap' className='max-w-3/4 p-5'>
-          <Projects/>
-        </Grid.Container>
-      </div>
     </div>
     </>
   );
