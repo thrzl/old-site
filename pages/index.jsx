@@ -1,10 +1,10 @@
 import { useLanyard } from 'use-lanyard'
-import {Github, ZeroConfig, Square} from "@geist-ui/icons"
 import profilePic from '../public/logo192.png'
 
 import Image from 'next/image'
-// import Projects from '../components/Projects'
+import Projects from '../components/Projects'
 import Presence from '../components/Presence'
+import {Grid} from '@nextui-org/react'
 
 function App() {
   var dottype = "error"
@@ -79,11 +79,11 @@ function App() {
           </a>
         </div>
       </header>
-      {/* <div className='hidden md:flex mx-auto max-w-2xl min-h-screen content-center items-center align-middle fontcalc'>
-        <Grid.Container gap={2} justify="center">
+      <div className='hidden md:flex mx-auto min-h-screen items-center'>
+        <Grid.Container gap={2} justify="center" wrap='wrap' className='max-w-3/4 p-5'>
           <Projects/>
         </Grid.Container>
-      </div> */}
+      </div>
     </div>
     </>
   );

@@ -1,6 +1,6 @@
 // import useFetch from "react-async"
 import { useQuery } from 'react-query'
-import {Grid, Text, Card, Loading} from '@nextui-org/react'
+import {Grid, Text, Card, Loading, Link} from '@nextui-org/react'
 
 function Projects(d) {
     const { isLoading, er, data } = useQuery('repoData', () =>
@@ -8,6 +8,7 @@ function Projects(d) {
        res.json()
      )
     )
+    console.log(data)
  
     if (isLoading || !data) return <Loading type="points-opacity" color="secondary" lg="true"/>
   
@@ -18,15 +19,15 @@ function Projects(d) {
     return (
       <>
       {data.map((repo) => (
-        <Grid xs={2} className="h-3/4">
-            <a href={repo.link} className="h-full w-1/2">
-              <Card className="bg-gray-800 shadow-2xl max-w-full" hoverable bordered clickable>
-                <Text h2 className="text-white font-bold">{repo.repo.toLowerCase()}</Text>
-                <Text h3 className="text-white text-md truncate mb-7">{repo.description.toLowerCase().replace(" ", "-")}</Text>
-                <Text h5 className="text-white absolute font-bold text-sm bottom-3 right-5 clear-both">⭐ {repo.stars}</Text>
-                <Text h5 className="text-white font-bold text-sm absolute bottom-3 left-5 clear-both">{repo.language.toLowerCase()}</Text>
-              </Card>
-            </a>
+        <Grid className='w-1/2'>
+          <Link className='w-full' href={repo.link}>
+            <Card className="bg-gray-800 shadow-2xl border-0 fontcalc" hoverable clickable wrap="wrap" onClick={() => {console.log("hey man"); window.location.href = repo.link; alert("wait what?")}}>
+              <Text h2 className="text-white font-bold">{repo.repo.toLowerCase()}</Text>
+              <Text h3 className="text-white text-md truncate mb-7">{repo.description.toLowerCase()}</Text>
+              <Text h5 className="text-white absolute font-bold text-sm bottom-3 right-5 clear-both">⭐ {repo.stars}</Text>
+              <Text h5 className="text-white font-bold text-sm absolute bottom-3 left-5 clear-both" css={{backgroundColor: data.languageColor}}>{repo.language.toLowerCase()}</Text>
+            </Card>
+          </Link>
           </Grid> 
         ))}
       </>

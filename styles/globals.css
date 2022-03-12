@@ -27,7 +27,7 @@
 }
 
 .fontcalc {
-  font-size: calc(10px + 2vmin);
+  font-size: calc(5px + 2vmin);
 }
 
 .App-header {
@@ -40,5 +40,5 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  max-width: 85vw
+  max-width: 85vw;
 }

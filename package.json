@@ -6,7 +6,6 @@
     "start": "next start"
   },
   "dependencies": {
-    "@geist-ui/icons": "^1.0.1",
     "@nextui-org/react": "^1.0.2-beta.4",
     "next": "latest",
     "react": "^17.0.2",
