@@ -16,6 +16,7 @@ export default function Document() {
                 {/* <script id="help-ukraine-win" async defer src="https://helpukrainewinwidget.org/cdn/widget.js" data-type="two" data-position="bottom-right"></script> */}
                 <link rel="preconnect" href="https://api.fonts.coollabs.io"/>
                 <link rel="stylesheet" href="https://api.fonts.coollabs.io/css2?family=Poppins:wght@400;700&display=swap" as="style" onLoad="this.onLoad=null,this.rel='stylesheet'"/>
+                <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"></link>
             </Head>
             <Head />
             <body>

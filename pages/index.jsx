@@ -4,7 +4,7 @@ import profilePic from '../public/logo192.png'
 
 import Image from 'next/image'
 // import Projects from '../components/Projects'
-import { Card } from '@nextui-org/react'
+import Presence from '../components/Presence'
 
 function App() {
   var dottype = "error"
@@ -58,45 +58,24 @@ function App() {
     }
   }
 
-  function Presence(data) {
-    let presence = data.presence
-    if (data.presence) {
-      return (
-        <Card className="p-5 mt-5 place-content-center transition-all ease-in-out duration-500 no-repeat w-max bg-slate-800 border-0" shadow hoverable bordered={false}>
-          <div className="flex justify-center presence">
-            <div className="hidden md:inline-block max-h-0">
-              <Image width="135px" height="135px" className="rounded-lg" src={p.image} layout="intrinsic"/>
-            </div>
-            
-            <div className="pl-5 place-content-start text-left">
-              <h3 className="mb-0.5 font-bold">{p.name}</h3>
-              <h4 className="mb-0.5">{p.details}</h4>
-              <h4 className="mb-0.5">{p.state}</h4>
-            </div>
-          </div>
-        </Card>
-      )
-    }
-    return null
-  }
   return (
     <>
-    <div className="App bg-slate-900">
+    <div className="App bg-gray-900">
       <header className="App-header">
         <Image width="160px" height="160px" src={du.avatar ? `https://cdn.discordapp.com/avatars/536644802595520534/${du.avatar}.webp?size=160` : profilePic} priority className="rounded-full m-auto w-fit relative" alt="profile"/>
         <h1 className="headertext font-bold sm:tagline text-gradient bg-gradient-to-r from-blue-500 to-purple-500 m-0 sm:text-small">
           heyo, i'm thrizzle.
         </h1>
         <Presence presence={p} />
-        <div className="links mt-5 flex">
-          <a href="https://github.com/terabyte3" className="text-white transition-all ease-in-out duration-1000 hover:scale-125 mx-3">
-            <Github/>
+        <div className="links mt-5 flex align-middle">
+          <a href="https://github.com/terabyte3" className="text-white transition-all ease-in-out duration-1000 hover:scale-125 mx-3 leading-tight">
+            <i class="bx bxl-github my-auto"></i>
           </a>
-          <a href="https://fermi.terabyteis.me" className="text-white transition-all ease-in-out duration-1000 hover:scale-125 mx-3">
-            <ZeroConfig/>
+          <a href="https://fermi.terabyteis.me" className="text-white transition-all ease-in-out duration-1000 hover:scale-125 mx-3 leading-tight">
+            <i class="bx bx-planet h-full"></i>
           </a>
-          <a href="https://crust.terabyteis.me" className="text-white transition-all ease-in-out duration-1000 hover:scale-125 mx-3">
-            <Square/>
+          <a href="https://crust.terabyteis.me" className="text-white transition-all ease-in-out duration-1000 hover:scale-125 mx-3 leading-tight">
+            <i class="bx bx-square-rounded h-full"></i>
           </a>
         </div>
       </header>
