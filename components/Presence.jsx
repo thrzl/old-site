@@ -13,7 +13,7 @@ function Presence({presence}) {
             <div className="pl-5 place-content-start text-left text-base">
               <h3 className="mb-0.5 font-bold">{presence.name.toLowerCase()}</h3>
               <h4 className="mb-0.5">{presence.details.toLowerCase()}</h4>
-              <h4 className="mb-0.5">{presence.state.toLowerCase()}</h4>
+              <h4 className="mb-0.5">{presence.state ? presence.state.toLowerCase() : null}</h4>
             </div>
           </div>
         </Card>
