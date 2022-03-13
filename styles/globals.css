@@ -42,3 +42,9 @@
   color: white;
   max-width: 85vw;
 }
+
+@supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  .backdrop-blur-sm {
+    background-color: rgba(17, 24, 39, 0.8);
+  }
+}

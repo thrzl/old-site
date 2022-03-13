@@ -18,7 +18,7 @@ function Projects(d) {
       {data.map((repo) => (
         <Grid xs className='w-1/2'>
           <Link className='w-full h-full' href={repo.link}>
-            <Card className="bg-gray-800 shadow-2xl border-0 fontcalc h-full w-full" hoverable clickable wrap="wrap" onClick={() => {console.log("hey man"); window.location.href = repo.link; alert("wait what?")}}>
+            <Card className="bg-gray-800 shadow-2xl border-0 fontcalc h-full w-full" hoverable clickable wrap="wrap" >
               <Text h2 className="text-white font-bold">{repo.repo.toLowerCase()}</Text>
               <Text h3 className="text-white text-md truncate mb-7">{repo.description.toLowerCase()}</Text>
               <Text h5 className="text-white absolute font-bold text-sm bottom-3 right-5 clear-both">⭐ {repo.stars}</Text>

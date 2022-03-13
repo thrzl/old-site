@@ -4,6 +4,7 @@ import profilePic from '../public/logo192.png'
 import Image from 'next/image'
 import Projects from '../components/Projects'
 import Presence from '../components/Presence'
+import Spotify from '../components/Spotify'
 import {Grid} from '@nextui-org/react'
 
 function App() {
@@ -25,8 +26,9 @@ function App() {
   status = dp
   var p;
   if (activity && activity.activities.length > 0) {
+    console.log(activity)
     for (let i = 0; i < activity.activities.length; i++) {
-      if (activity.activities[i].id !== "custom") {
+      if (activity.activities[i].type !== 2 && activity.activities[i].type !== 4) {
         var img;
         if (activity.activities[i].assets && activity.activities[i].assets.large_image) {
           img = activity.activities[i].assets.large_image
@@ -61,6 +63,8 @@ function App() {
   return (
     <>
     <div className="App bg-gray-900">
+      <Spotify spotify={activity ? activity.spotify : null} className="hidden "/>
+      {/* <p className="absolute top-3 left-3 text-2xl text-white"><i className="bx bxl-discord-alt align-middle"></i> <span class="font-bold">playing</span> {p ? p.name.toLowerCase() : null} </p> */}
       <header className="App-header">
         <Image width="160px" height="160px" src={du.avatar ? `https://cdn.discordapp.com/avatars/536644802595520534/${du.avatar}.webp?size=160` : profilePic} priority className="rounded-full m-auto w-fit relative" alt="profile"/>
         <h1 className="headertext font-bold sm:tagline text-gradient bg-gradient-to-r from-blue-500 to-purple-500 m-0 sm:text-small">
@@ -69,13 +73,13 @@ function App() {
         <Presence presence={p} />
         <div className="links mt-5 flex align-middle">
           <a href="https://github.com/terabyte3" className="text-white transition-all ease-in-out duration-1000 hover:scale-125 mx-3 leading-tight">
-            <i class="bx bxl-github my-auto"></i>
+            <i className="bx bxl-github my-auto"></i>
           </a>
           <a href="https://fermi.terabyteis.me" className="text-white transition-all ease-in-out duration-1000 hover:scale-125 mx-3 leading-tight">
-            <i class="bx bx-planet h-full"></i>
+            <i className="bx bx-planet h-full"></i>
           </a>
           <a href="https://crust.terabyteis.me" className="text-white transition-all ease-in-out duration-1000 hover:scale-125 mx-3 leading-tight">
-            <i class="bx bx-square-rounded h-full"></i>
+            <i className="bx bx-square-rounded h-full"></i>
           </a>
         </div>
         <div className='hidden md:flex w-1/2 items-center'>
