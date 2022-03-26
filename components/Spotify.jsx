@@ -1,5 +1,4 @@
-import { Card } from "@nextui-org/react"
-import Image from "next/image"
+import { Card, Link } from "@nextui-org/react"
 
 function Spotify({spotify}) {
     if (spotify) {
@@ -9,12 +8,13 @@ function Spotify({spotify}) {
                     {/* <div className="hidden md:inline-block">
                         <Image width="135px" height="135px" className="rounded-lg" src={spotify.album_art_url} layout="intrinsic"/>
                     </div> */}
-                    
-                    <div className="p-3 place-content-start text-left">
-                        <h3 className="mb-0.5 font-bold truncate">listening to {spotify.song.toLowerCase()}</h3>
-                        <h4 className="mb-0.5 truncate">on {spotify.album.toLowerCase()}</h4>
-                        <h4 className="mb-0.5 truncate">by {spotify.artist.toLowerCase()}</h4>
-                    </div>
+                    <Link href={`https://open.spotify.com/track/${spotify.track_id}`} color="default">
+                        <div className="p-3 place-content-start text-left text-white">
+                            <h3 className="mb-0.5 font-bold truncate">listening to {spotify.song.toLowerCase()}</h3>
+                            <h4 className="mb-0.5 truncate">on {spotify.album.toLowerCase()}</h4>
+                            <h4 className="mb-0.5 truncate">by {spotify.artist.toLowerCase()}</h4>
+                        </div>
+                    </Link>
                 </div>
             </Card>
         )
