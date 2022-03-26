@@ -10,7 +10,7 @@ function Presence({presence}) {
               <Image width="135px" height="135px" className="rounded-lg" src={presence.image} layout="intrinsic"/>
             </div> */}
             
-            <div className="pl-5 place-content-start text-left text-base">
+            <div className="p-3 place-content-start text-left text-base">
               <h3 className="mb-0.5 font-bold">{presence.name.toLowerCase()}</h3>
               <h4 className="mb-0.5">{presence.details.toLowerCase()}</h4>
               <h4 className="mb-0.5">{presence.state ? presence.state.toLowerCase() : null}</h4>

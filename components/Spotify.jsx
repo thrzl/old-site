@@ -10,7 +10,7 @@ function Spotify({spotify}) {
                         <Image width="135px" height="135px" className="rounded-lg" src={spotify.album_art_url} layout="intrinsic"/>
                     </div> */}
                     
-                    <div className="pl-5 place-content-start text-left">
+                    <div className="p-3 place-content-start text-left">
                         <h3 className="mb-0.5 font-bold truncate">listening to {spotify.song.toLowerCase()}</h3>
                         <h4 className="mb-0.5 truncate">on {spotify.album.toLowerCase()}</h4>
                         <h4 className="mb-0.5 truncate">by {spotify.artist.toLowerCase()}</h4>
