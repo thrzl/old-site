@@ -5,25 +5,19 @@ import Image from 'next/image'
 import Projects from '../components/Projects'
 import Presence from '../components/Presence'
 import Spotify from '../components/Spotify'
-import {Grid} from '@nextui-org/react'
+import { Grid } from '@nextui-org/react'
 
 function App() {
-  var dottype = "error"
-  var status = "api error"
   const { data: activity } = useLanyard("536644802595520534");
-  var dp;
   var du = {
     username: "api error",
     discriminator: "0000"
   };
   if (activity === undefined) {
-    dp = "offline"
     du = "api error#0000"
   } else {
-    dp = activity.discord_status
     du = activity.discord_user
   }
-  status = dp
   var p;
   if (activity && activity.activities.length > 0) {
     console.log(activity)
@@ -73,13 +67,13 @@ function App() {
         <Presence presence={p} />
         <div className="links mt-5 flex align-middle">
           <a href="https://github.com/terabyte3" className="text-white transition-all ease-in-out duration-1000 hover:scale-125 mx-3 leading-tight">
-            <i className="bx bxl-github my-auto"></i>
+            <i className="bx bxl-github my-auto" title='github'></i>
           </a>
           <a href="https://fermi.terabyteis.me" className="text-white transition-all ease-in-out duration-1000 hover:scale-125 mx-3 leading-tight">
-            <i className="bx bx-planet h-full"></i>
+            <i className="bx bx-planet h-full" title='planet'></i>
           </a>
           <a href="https://crust.terabyteis.me" className="text-white transition-all ease-in-out duration-1000 hover:scale-125 mx-3 leading-tight">
-            <i className="bx bx-square-rounded h-full"></i>
+            <i className="bx bx-square-rounded h-full" title='square'></i>
           </a>
         </div>
         <div className='hidden md:flex w-1/2 items-center'>

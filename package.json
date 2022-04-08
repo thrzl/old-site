@@ -6,7 +6,9 @@
     "start": "next start"
   },
   "dependencies": {
+    "@fontsource/poppins": "^4.5.5",
     "@nextui-org/react": "^1.0.2-beta.4",
+    "boxicons": "^2.1.2",
     "next": "latest",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -20,7 +22,7 @@
     "@types/react": "17.0.38",
     "autoprefixer": "^10.4.0",
     "postcss": "^8.4.5",
-    "prettier": "^2.5.1",
+    "prettier": "^2.6.2",
     "prettier-plugin-tailwindcss": "^0.1.1",
     "tailwindcss": "^3.0.7",
     "typescript": "4.5.4"

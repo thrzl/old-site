@@ -1,6 +1,8 @@
 import '../styles/globals.css'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { NextUIProvider } from '@nextui-org/react'
+import "@fontsource/poppins/400.css"
+import "@fontsource/poppins/700.css"
 import Head from 'next/head'
 import React from 'react'
 
