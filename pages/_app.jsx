@@ -4,10 +4,9 @@ import { NextUIProvider } from '@nextui-org/react'
 import "@fontsource/poppins/400.css"
 import "@fontsource/poppins/700.css"
 import Head from 'next/head'
-import React from 'react'
+import React from 'preact/compat'
 
 const client = new QueryClient()
-
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -23,5 +22,4 @@ function MyApp({ Component, pageProps }) {
     </>
   )
 }
-
 export default MyApp

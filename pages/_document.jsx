@@ -4,7 +4,7 @@ import { CssBaseline } from '@nextui-org/react';
 
 export default function Document() {
     return (
-        <Html lang="en" className='bg-slate-900'>
+        <Html lang="en">
             <Head>
                 {CssBaseline.flush()}
                 <meta
