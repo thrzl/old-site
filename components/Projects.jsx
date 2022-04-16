@@ -1,6 +1,6 @@
 // import useFetch from "react-async"
 import { useQuery } from 'react-query'
-import { Grid, Text, Card, Link } from '@nextui-org/react'
+import { Grid, Card } from '@nextui-org/react'
 import { render } from "preact"
 
 function Projects(d) {
@@ -16,14 +16,14 @@ function Projects(d) {
     <>
       {data.map((repo) => (
         <Grid xs className='w-1/2' key={repo}>
-          <Link className='w-full h-full' href={repo.link}>
-            <Card className="bg-gray-900 border-0 shadow-none fontcalc h-full w-full" wrap="wrap" >
-              <Text h2 className="text-white font-bold">{repo.repo.toLowerCase()}</Text>
-              <Text h3 className="text-white text-md truncate mb-7">{repo.description.toLowerCase()}</Text>
-              <Text h5 className="text-white absolute font-bold text-sm bottom-3 right-5 clear-both">⭐ {repo.stars}</Text>
-              <Text h5 className="text-white font-bold text-sm absolute bottom-3 left-5 clear-both" css={{ backgroundColor: data.languageColor }}>{repo.language.toLowerCase()}</Text>
+          <a className='w-full h-full' href={repo.link}>
+            <Card className="bg-gray-900 border-0 duration-500 hover:-translate-y-3 shadow-none fontcalc h-full w-full" wrap="wrap" >
+              <h2 className="text-white font-bold">{repo.repo.toLowerCase()}</h2>
+              <h3 className="text-white text-md truncate mb-7">{repo.description.toLowerCase()}</h3>
+              <h5 className="text-white absolute font-bold text-sm bottom-3 right-5 clear-both">⭐ {repo.stars}</h5>
+              <h5 className="text-white font-bold text-sm absolute bottom-3 left-5 clear-both" css={{ backgroundColor: data.languageColor }}>{repo.language.toLowerCase()}</h5>
             </Card>
-          </Link>
+          </a>
         </Grid>
       ))}
     </>

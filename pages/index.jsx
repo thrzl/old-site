@@ -59,13 +59,13 @@ function App() {
             heyo, i'm thrizzle.
           </h1>
           <div className="links mt-5 flex align-middle">
-            <a href="https://github.com/terabyte3" className="text-white transition-all ease-in-out duration-1000 hover:scale-125 mx-3 leading-tight">
+            <a href="https://github.com/terabyte3" className="text-white transition-all ease-in-out duration-500 hover:scale-125 mx-3 leading-tight">
               <i className="bx bxl-github my-auto" title='github'></i>
             </a>
-            <a href="https://fermi.terabyteis.me" className="text-white transition-all ease-in-out duration-1000 hover:scale-125 mx-3 leading-tight">
+            <a href="https://fermi.terabyteis.me" className="text-white transition-all ease-in-out duration-500 hover:scale-125 mx-3 leading-tight">
               <i className="bx bx-planet h-full" title='planet'></i>
             </a>
-            <a href="https://crust.terabyteis.me" className="text-white transition-all ease-in-out duration-1000 hover:scale-125 mx-3 leading-tight">
+            <a href="https://crust.terabyteis.me" className="text-white transition-all ease-in-out duration-500 hover:scale-125 mx-3 leading-tight">
               <i className="bx bx-square-rounded h-full" title='square'></i>
             </a>
           </div>
