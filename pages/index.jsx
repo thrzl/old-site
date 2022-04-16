@@ -10,10 +10,8 @@ function App() {
   const act = useLanyardWs("536644802595520534");
   var p;
   if (act && act.activities.length) {
-    console.log(act.activities)
     for (const i in act.activities) {
       let activity = act.activities[i]
-      console.log(`activity: ${activity}`)
       if (activity.type == 0) {
         var img;
         if (activity.assets) { // find the appropriate image
