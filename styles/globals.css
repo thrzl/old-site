@@ -31,16 +31,8 @@
 }
 
 .App-header {
-  margin-left:auto;
-  margin-right:auto;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  @apply mx-auto min-h-screen flex flex-col items-center justify-center text-white lg:max-w-screen-xl w-screen;
   font-size: calc(10px + 2vmin);
-  color: white;
-  max-width: 85vw;
 }
 
 @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
