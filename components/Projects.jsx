@@ -14,18 +14,20 @@ function Projects(d) {
   if (er) return alert('An error has occurred: ' + er.message)
   render(
     <>
+      <Grid.Container gap={2} justify="center" wrap='wrap' className='max-w-3/4 p-5' >
       {data.map((repo) => (
         <Grid xs className='w-1/2' key={repo}>
           <a className='w-full h-full' href={repo.link}>
-            <Card className="bg-gray-900 border-0 duration-500 hover:-translate-y-3 shadow-none fontcalc h-full w-full" wrap="wrap" >
+            <Card className="bg-gray-900 border-0 duration-500 hover:-translate-y-3 shadow-none fontcalc h-full w-full">
               <h2 className="text-white font-bold">{repo.repo.toLowerCase()}</h2>
-              <h3 className="text-white text-md truncate mb-7">{repo.description.toLowerCase()}</h3>
+              <h3 className="text-white text-base truncate mb-7">{repo.description.toLowerCase()}</h3>
               <h5 className="text-white absolute font-bold text-sm bottom-3 right-5 clear-both">⭐ {repo.stars}</h5>
               <h5 className="text-white font-bold text-sm absolute bottom-3 left-5 clear-both" css={{ backgroundColor: data.languageColor }}>{repo.language.toLowerCase()}</h5>
             </Card>
           </a>
         </Grid>
       ))}
+      </Grid.Container>
     </>
     , document.getElementById("projects"))
 }
