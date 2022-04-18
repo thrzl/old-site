@@ -1,14 +1,15 @@
 import dynamic from 'next/dynamic'
 
-import { useLanyardWs } from 'use-lanyard'
 import profilePic from '../public/logo192.webp'
 import Image from 'next/image'
+import usePresence from '../hooks/usePresence'
 const Projects = dynamic(() => import('../components/Projects'))
 const Presence = dynamic(() => import('../components/Presence'))
 const Spotify = dynamic(() => import('../components/Spotify'))
 
 function App() {
-  const act = useLanyardWs("536644802595520534");
+  const activity = usePresence()
+  const act = activity ? activity.data : activity
   var p;
   if (act && act.activities.length) {
     for (const i in act.activities) {
@@ -61,7 +62,7 @@ function App() {
         <header className="App-header">
           <Image width="160px" height="160px" src={profilePic} priority blur className="rounded-full m-auto relative" alt="profile" />
           <h1 className="headertext my-2 font-bold sm:tagline text-gradient bg-gradient-to-r from-blue-500 to-purple-500 m-0 sm:text-small">
-            heyo, i'm thrizzle.
+            heyo, i&apos;m thrizzle.
           </h1>
           <div className="links flex text-base align-middle font-mono h-min-content">
             <a href="https://github.com/terabyte3" className="text-white text-gradient p-3 from-gray-600 to-white bg-gradient-to-br transition-all ease-in-out duration-500 hover:font-boldhover:from-white hover:to-gray-600 mx-3 leading-tight font-mono">
