@@ -75,7 +75,7 @@ function App() {
               /crust
             </a>
           </div>
-          <div className='hidden md:flex w-1/2 items-center' id="projects">
+          <div className='flex w-1/2 items-center' id="projects">
             <Projects />
           </div>
         </header>
