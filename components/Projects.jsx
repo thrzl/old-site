@@ -6,11 +6,8 @@ function Projects() {
     const res = await fetch(`https://gh-pinned-repos.egoist.sh/?username=terabyte3`)
     return res.json()
   })
-
+  
   if (isLoading || !data) return <p>loading projects...</p>
-  console.log(data)
-  console.log(isLoading)
-  console.log(er)
 
   if (er) return alert('An error has occurred: ' + er.message)
   render(
@@ -23,7 +20,7 @@ function Projects() {
               <h2 className="text-white font-bold inline w-min md:w-full md:block">{repo.repo.toLowerCase()}</h2>
               <h3 className="text-white hidden md:block w-min md:w-full text-base truncate">{repo.description.toLowerCase()}</h3>
               <div className='md:mb-7 p-0 m-0'></div>
-              <h5 className="text-white md:fixed inline font-bold w-max mr-3 text-sm md:bottom-3 md:right-5 md:clear-both">⭐ {repo.stars}</h5>
+              <h4 className="text-white md:fixed inline font-bold w-max mr-3 text-sm md:bottom-3 md:right-5 md:clear-both">⭐ {repo.stars}</h4>
               <h5 className="text-white md:fixed inline font-bold w-max text-sm md:bottom-3 md:left-5 md:clear-both" style={{ color: data.languageColor }}>{repo.language.toLowerCase()}</h5>
             </div>
           </a>

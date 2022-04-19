@@ -6,6 +6,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 // const withPreact = require("next-plugin-preact")
 
 module.exports = withBundleAnalyzer({
+  swcMinify: true,
   // reactStrictMode: true,
   images: {
     domains: ['cdn.discordapp.com', 'media.discordapp.net', 'raw.githubusercontent.com', 'i.scdn.co', "avatars.githubusercontent.com"],
