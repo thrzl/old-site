@@ -1,13 +1,13 @@
-import { useQuery } from 'react-query'
+import useSWR from 'swr'
 import { render } from "preact"
 
 function Projects() {
-  const { isLoading, er, data } = useQuery('repoData', async () => {
-    const res = await fetch(`https://gh-pinned-repos.egoist.sh/?username=terabyte3`)
+  const { isValidating, er, data } = useSWR('https://gh-pinned-repos.egoist.sh/?username=terabyte3', async (url) => {
+    const res = await fetch(url)
     return res.json()
   })
   
-  if (isLoading || !data) return <p>loading projects...</p>
+  if (isValidating || !data) return <p>loading projects...</p>
 
   if (er) return alert('An error has occurred: ' + er.message)
   render(

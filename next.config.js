@@ -3,10 +3,11 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 })
 
-// const withPreact = require("next-plugin-preact")
+const withPreact = require("next-plugin-preact")
 
-module.exports = withBundleAnalyzer({
+module.exports = withBundleAnalyzer(withPreact({
   swcMinify: true,
+  experimental: { esmExternals: false },
   // reactStrictMode: true,
   images: {
     domains: ['cdn.discordapp.com', 'media.discordapp.net', 'raw.githubusercontent.com', 'i.scdn.co', "avatars.githubusercontent.com"],
@@ -26,4 +27,4 @@ module.exports = withBundleAnalyzer({
 
     return config;
   },
-})
+}))
