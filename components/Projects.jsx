@@ -9,7 +9,7 @@ function Projects() {
   
   if (isValidating || !data) return <p>loading projects...</p>
 
-  if (er) return alert('An error has occurred: ' + er.message)
+  if (er) return <p>whoops... couldn&apos;t reach github</p>
   render(
     <>
       <div className='mt-3 grid gap-4 grid-cols-1 lg:grid-cols-2 w-full'>
