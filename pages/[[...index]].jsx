@@ -5,7 +5,7 @@ import Image from 'next/image'
 import usePresence from '../hooks/usePresence'
 const Projects = dynamic(() => import('../components/Projects'))
 const Presence = dynamic(() => import('../components/Presence'))
-const Spotify = dynamic(() => import('../components/Spotify'))
+const Moosync = dynamic(() => import('../components/Moosync'))
 
 function App() {
   const activity = usePresence()
@@ -53,8 +53,8 @@ function App() {
   return (
     <>
       <div className="App bg-black">
-        <div id='spotify'>
-          <Spotify spotify={act ? act.spotify : null} className="hidden" />
+        <div id='moosync'>
+          <Moosync data={act ? act.activities : null} className="hidden" />
         </div>
         <div id='presence'>
           <Presence presence={p} />
