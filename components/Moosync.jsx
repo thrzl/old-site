@@ -7,7 +7,6 @@ function Moosync({ data }) {
     }
     if (moosyncData) {
         moosyncData = moosyncData[0]
-        console.log("moosyncData", moosyncData)
         let [artist, album] = moosyncData.state.split(" - ")
         var imgUrl;
         if (moosyncData.assets.large_image.includes("mp:external/")) {
