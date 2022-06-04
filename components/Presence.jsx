@@ -2,8 +2,10 @@ import { render } from 'preact'
 
 function Presence({ presence }) {
   if (presence) {
+    console.log(presence.name)
     if (presence.name.toLowerCase() == "moosync") {
       render(<></>, document.getElementById('presence'))
+      return
     }
     if (presence.details) {
       render(
