@@ -11,7 +11,7 @@ function Projects() {
   let colors = ["7f1d1d", '9a3412', 'a16207', '3f6212', '1e3a8a', '4c1d95'] // bro this is so gay fr
 
   if (isValidating || !data) {
-    if (data) {
+
       render(<div className='mt-3 grid gap-4 grid-cols-1 lg:grid-cols-2 w-full'>
         {[...Array(6)].map((x, i) => (
           <div key={x}>
