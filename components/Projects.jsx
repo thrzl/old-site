@@ -3,7 +3,7 @@ import { render } from "preact"
 import Skeleton from 'react-loading-skeleton'
 
 function Projects() {
-  const { isValidating, er, data } = useSWR('https://pinned.up.railway.app/terabyte3', async (url) => {
+  const { isValidating, er, data } = useSWR('/api/pinned-repos', async (url) => {
     const res = await fetch(url)
     return res.json()
   })
@@ -47,7 +47,7 @@ function Projects() {
           <div key={repo}>
             <a className='w-full h-full whitespace-nowrap md:text-left text-center' href={repo.link}>
               <div className={`border-0 duration-500 -translate-y-0 hover:-translate-y-2 relative rounded-lg shadow-none fontcalc h-full w-full p-5`} style={{backgroundColor: `#${colors[i]}`}}>
-                <h2 className="text-white font-bold inline w-min md:w-full md:block truncate">{repo.repo.toLowerCase()}</h2>
+                <h2 className="text-white font-bold inline w-min md:w-full md:block truncate">{repo.name.toLowerCase()}</h2>
                 <h3 className="text-white hidden md:block w-min md:w-full text-base truncate">{repo.description.toLowerCase()}</h3>
                 <div className='md:mb-7 p-0 m-0'></div>
                 <h4 className="text-white md:fixed inline font-bold w-max mr-3 text-sm md:bottom-3 md:right-5 md:clear-both">⭐ {repo.stars}</h4>
