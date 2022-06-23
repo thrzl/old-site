@@ -1,10 +1,17 @@
-FROM node:current-alpine3.16 as builder
-COPY . /app
-WORKDIR /app
-RUN npm ci
-RUN npm run build
+FROM node:18-alpine as install-deps
 
-FROM gcr.io/distroless/nodejs:18
-COPY --from=builder /app /app
 WORKDIR /app
-ENTRYPOINT ["build/index.js"]
+
+COPY . .
+RUN npm install
+
+FROM install-deps as builder
+RUN npm run build
+RUN npm prune --production # Remove dev dependencies
+
+FROM builder as production-env
+
+EXPOSE 3000
+ENV HOST=0.0.0.0
+
+CMD [ "build" ]
