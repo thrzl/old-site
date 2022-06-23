@@ -11,7 +11,7 @@
         large_text: string
     }
     let p: Presence;
-    if (act && act.activities.length) {
+    $: if (act && act.activities.length) {
       for (const i in act.activities) {
         let activity = act.activities[i]
         if (activity.type == 0) {
