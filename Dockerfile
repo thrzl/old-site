@@ -10,8 +10,6 @@ RUN npm run build
 RUN npm prune --production # Remove dev dependencies
 
 FROM builder as production-env
-
 EXPOSE 3000
-ENV HOST=0.0.0.0
 
-CMD [ "npm", "run", "preview" ]
+CMD [ "npm", "run", "preview", "--host" ]
