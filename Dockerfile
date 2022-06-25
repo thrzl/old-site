@@ -14,4 +14,4 @@ FROM builder as production-env
 EXPOSE 3000
 ENV HOST=0.0.0.0
 
-CMD [ "build" ]
+CMD [ "npm", "run", "preview" ]
