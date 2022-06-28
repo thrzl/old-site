@@ -1,8 +1,8 @@
 /** @type {import('@sveltejs/kit').RequestHandler} */
 export async function get() {
-    const res = await fetch('https://pinned.terabyteis.me/terabyte3')
+    const res = await fetch('https://pinned.thrzl.xyz/terabyte3')
     if (res) {
-        let repos = await res.json()
+        const repos = await res.json()
         return {
             body: {repos}
         }
