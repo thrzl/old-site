@@ -23,7 +23,7 @@
     {#each $data.repos as repo, i (repo.name)}
       <div>
         <a class='w-full h-full whitespace-nowrap md:text-left text-center' href={repo.link}>
-          <div class={`border-0 duration-500 -translate-y-0 hover:-translate-y-2 relative rounded-lg shadow-none fontcalc h-full w-full p-5`} style={`background-color: #${colors[i]}`}>
+          <div class="border-0 duration-500 -translate-y-0 hover:-translate-y-2 relative rounded-lg shadow-none fontcalc h-full w-full p-5" style={`background-color: #${colors[i]}`}>
             <h2 class="text-white font-bold inline w-min md:w-full md:block truncate">{repo.name.toLowerCase()}</h2>
             <h3 class="text-white hidden md:block w-min md:w-full text-base truncate">{repo.description.toLowerCase()}</h3>
             <div class='md:mb-7 p-0 m-0'></div>

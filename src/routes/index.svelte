@@ -3,6 +3,7 @@
 	import Projects from '../Projects.svelte';
 	import Presence from '../Presence.svelte';
 	import Moosync from '../Moosync.svelte';
+	const title = "heyo, i'm thrizzle."
 </script>
 
 <div class="App bg-black">
@@ -21,9 +22,11 @@
 			alt="profile"
 		/>
 		<h1
-			class="headertext my-2 font-bold sm:tagline text-gradient bg-gradient-to-r from-blue-500 to-purple-500 m-0 sm:text-small"
+			class="headertext my-2 font-bold sm:tagline m-0 sm:text-small rise-wrapper"
 		>
-			heyo, i&apos;m thrizzle.
+			{#each title.split(" ") as word, index}
+				<span class="rise-anim inline-flex" style={`--delay: ${index * 100 + 100}ms`}>{`${word}`}{index !== title.split(' ').length - 1 ? ' ' : ''}</span> 
+			{/each}
 		</h1>
 		<div class="links flex text-base align-middle font-mono h-min-content">
 			<a
@@ -33,13 +36,13 @@
 				/gh
 			</a>
 			<a
-				href="https://fermi.terabyteis.me"
+				href="https://fermi.thrzl.xyz"
 				class="text-white text-gradient p-3 from-purple-600 to-indigo-400 bg-gradient-to-br transition-all ease-in-out duration-500 hover:from-indigo-400 hover:to-purple-600 mx-3 leading-tight font-mono"
 			>
 				/fermi
 			</a>
 			<a
-				href="https://crust.terabyteis.me"
+				href="https://crust.thrzl.xyz"
 				class="text-white text-gradient p-3 from-orange-600 to-orange-400 bg-gradient-to-br transition-all ease-in-out duration-500 hover:from-orange-400 hover:to-orange-600 mx-3 leading-tight font-mono"
 			>
 				/crust

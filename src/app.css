@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap'); */
 
 @layer utilities {
   .text-gradient {
@@ -39,4 +38,29 @@
   .backdrop-blur-sm {
     background-color: rgba(17, 24, 39, 0.8);
   }
+}
+
+.rise-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+@keyframes rise {
+  0% {
+    transform: translate3d(0, 110%, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.rise-anim {
+  white-space: pre;
+  transform: translate3d(0, 110%, 0);
+  animation-name: rise;
+  animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+  animation-duration: 1000ms;
+  animation-delay: var(--delay);
+  animation-fill-mode: forwards;
 }
