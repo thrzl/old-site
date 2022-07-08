@@ -2,13 +2,13 @@
 	import profilePic from '../../static/logo192.webp';
 	import Projects from '../Projects.svelte';
 	import Presence from '../Presence.svelte';
-	import Moosync from '../Moosync.svelte';
-	const title = "heyo, i'm thrizzle."
+	import Spotify from '../Spotify.svelte';
+	const title = "heyo, i'm thrizzle.";
 </script>
 
 <div class="App bg-black">
-	<div id="moosync">
-		<Moosync />
+	<div id="spotify">
+		<Spotify />
 	</div>
 	<div id="presence">
 		<Presence />
@@ -21,11 +21,11 @@
 			class="rounded-full relative"
 			alt="profile"
 		/>
-		<h1
-			class="headertext my-2 font-bold sm:tagline m-0 sm:text-small rise-wrapper"
-		>
-			{#each title.split(" ") as word, index}
-				<span class="rise-anim inline-flex" style={`--delay: ${index * 100 + 100}ms`}>{`${word}`}{index !== title.split(' ').length - 1 ? ' ' : ''}</span> 
+		<h1 class="headertext my-2 font-bold sm:tagline m-0 sm:text-small rise-wrapper">
+			{#each title.split(' ') as word, index}
+				<span class="rise-anim inline-flex" style={`--delay: ${index * 100 + 100}ms`}
+					>{`${word}`}{index !== title.split(' ').length - 1 ? ' ' : ''}</span
+				>
 			{/each}
 		</h1>
 		<div class="links flex text-base align-middle font-mono h-min-content">

@@ -3,64 +3,63 @@
 @tailwind utilities;
 
 @layer utilities {
-  .text-gradient {
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .tagline {
-    font-size: calc(20px + 2vmin)
-  }
-  .headertext {
-    line-height: calc(1em + 2vmin)
-  }
+	.text-gradient {
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	.tagline {
+		font-size: calc(20px + 2vmin);
+	}
+	.headertext {
+		line-height: calc(1em + 2vmin);
+	}
 }
 
 * {
-  font-family: 'Poppins', sans-serif;
-  @apply selection:bg-gray-400
-  
+	font-family: 'Poppins', sans-serif;
+	@apply selection:bg-gray-400;
 }
 
 .App {
-  text-align: center;
+	text-align: center;
 }
 
 .fontcalc {
-  font-size: calc(5px + 2vmin);
+	font-size: calc(5px + 2vmin);
 }
 
 .App-header {
-  @apply mx-auto min-h-screen flex flex-col items-center justify-center text-white lg:max-w-screen-xl w-screen;
-  font-size: calc(10px + 2vmin);
+	@apply mx-auto min-h-screen flex flex-col items-center justify-center text-white lg:max-w-screen-xl w-screen;
+	font-size: calc(10px + 2vmin);
 }
 
 @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
-  .backdrop-blur-sm {
-    background-color: rgba(17, 24, 39, 0.8);
-  }
+	.backdrop-blur-sm {
+		background-color: rgba(17, 24, 39, 0.8);
+	}
 }
 
 .rise-wrapper {
-  overflow: hidden;
-  position: relative;
+	overflow: hidden;
+	position: relative;
 }
 
 @keyframes rise {
-  0% {
-    transform: translate3d(0, 110%, 0);
-  }
+	0% {
+		transform: translate3d(0, 110%, 0);
+	}
 
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
+	100% {
+		transform: translate3d(0, 0, 0);
+	}
 }
 
 .rise-anim {
-  white-space: pre;
-  transform: translate3d(0, 110%, 0);
-  animation-name: rise;
-  animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
-  animation-duration: 1000ms;
-  animation-delay: var(--delay);
-  animation-fill-mode: forwards;
+	white-space: pre;
+	transform: translate3d(0, 110%, 0);
+	animation-name: rise;
+	animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	animation-duration: 1000ms;
+	animation-delay: var(--delay);
+	animation-fill-mode: forwards;
 }

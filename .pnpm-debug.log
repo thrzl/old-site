@@ -1,0 +1,351 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "website",
+      "version": "0.0.1",
+      "scripts": {
+        "dev": "svelte-kit dev",
+        "build": "svelte-kit build",
+        "package": "svelte-kit package",
+        "preview": "svelte-kit preview",
+        "prepare": "svelte-kit sync",
+        "check": "svelte-check --tsconfig ./tsconfig.json",
+        "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
+        "lint": "prettier --check --plugin-search-dir=. . && eslint .",
+        "format": "prettier --write --plugin-search-dir=. ."
+      },
+      "devDependencies": {
+        "@sveltejs/adapter-auto": "next",
+        "@sveltejs/kit": "next",
+        "@typescript-eslint/eslint-plugin": "^5.27.0",
+        "@typescript-eslint/parser": "^5.27.0",
+        "autoprefixer": "^10.4.7",
+        "eslint": "^8.16.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-svelte3": "^4.0.0",
+        "postcss": "^8.4.14",
+        "prettier": "^2.6.2",
+        "prettier-plugin-svelte": "^2.7.0",
+        "svelte": "^3.44.0",
+        "svelte-check": "^2.7.1",
+        "svelte-preprocess": "^4.10.7",
+        "tailwindcss": "^3.1.4",
+        "tslib": "^2.3.1",
+        "typescript": "^4.7.2"
+      },
+      "type": "module",
+      "dependencies": {
+        "@fontsource/poppins": "^4.5.8",
+        "sswr": "^1.7.0"
+      }
+    },
+    "prefix": "/home/thrizzle/website"
+  },
+  "2 debug pnpm:context": {
+    "currentLockfileExists": false,
+    "storeDir": "/home/thrizzle/.local/share/pnpm/store/v3",
+    "virtualStoreDir": "/home/thrizzle/website/node_modules/.pnpm"
+  },
+  "3 info pnpm": {
+    "message": "Lockfile is up-to-date, resolution step is skipped",
+    "prefix": "/home/thrizzle/website"
+  },
+  "4 debug pnpm:stats": {
+    "prefix": "/home/thrizzle/website",
+    "removed": 0
+  },
+  "5 debug pnpm:stage": {
+    "prefix": "/home/thrizzle/website",
+    "stage": "importing_started"
+  },
+  "6 warn pnpm:install-check": {
+    "message": "Unsupported platform for /esbuild-android-64/0.14.47: wanted {\"cpu\":[\"x64\"],\"os\":[\"android\"],\"libc\":[\"any\"]} (current: {\"os\":\"linux\",\"cpu\":\"x64\",\"libc\":\"glibc\"})",
+    "prefix": "/home/thrizzle/website"
+  },
+  "7 debug pnpm:skipped-optional-dependency": {
+    "details": "Error: Unsupported platform for /esbuild-android-64/0.14.47: wanted {\"cpu\":[\"x64\"],\"os\":[\"android\"],\"libc\":[\"any\"]} (current: {\"os\":\"linux\",\"cpu\":\"x64\",\"libc\":\"glibc\"})",
+    "package": {
+      "id": "/esbuild-android-64/0.14.47",
+      "name": "esbuild-android-64",
+      "version": "0.14.47"
+    },
+    "prefix": "/home/thrizzle/website",
+    "reason": "unsupported_platform"
+  },
+  "8 warn pnpm:install-check": {
+    "message": "Unsupported platform for /esbuild-android-arm64/0.14.47: wanted {\"cpu\":[\"arm64\"],\"os\":[\"android\"],\"libc\":[\"any\"]} (current: {\"os\":\"linux\",\"cpu\":\"x64\",\"libc\":\"glibc\"})",
+    "prefix": "/home/thrizzle/website"
+  },
+  "9 debug pnpm:skipped-optional-dependency": {
+    "details": "Error: Unsupported platform for /esbuild-android-arm64/0.14.47: wanted {\"cpu\":[\"arm64\"],\"os\":[\"android\"],\"libc\":[\"any\"]} (current: {\"os\":\"linux\",\"cpu\":\"x64\",\"libc\":\"glibc\"})",
+    "package": {
+      "id": "/esbuild-android-arm64/0.14.47",
+      "name": "esbuild-android-arm64",
+      "version": "0.14.47"
+    },
+    "prefix": "/home/thrizzle/website",
+    "reason": "unsupported_platform"
+  },
+  "10 warn pnpm:install-check": {
+    "message": "Unsupported platform for /esbuild-darwin-64/0.14.47: wanted {\"cpu\":[\"x64\"],\"os\":[\"darwin\"],\"libc\":[\"any\"]} (current: {\"os\":\"linux\",\"cpu\":\"x64\",\"libc\":\"glibc\"})",
+    "prefix": "/home/thrizzle/website"
+  },
+  "11 debug pnpm:skipped-optional-dependency": {
+    "details": "Error: Unsupported platform for /esbuild-darwin-64/0.14.47: wanted {\"cpu\":[\"x64\"],\"os\":[\"darwin\"],\"libc\":[\"any\"]} (current: {\"os\":\"linux\",\"cpu\":\"x64\",\"libc\":\"glibc\"})",
+    "package": {
+      "id": "/esbuild-darwin-64/0.14.47",
+      "name": "esbuild-darwin-64",
+      "version": "0.14.47"
+    },
+    "prefix": "/home/thrizzle/website",
+    "reason": "unsupported_platform"
+  },
+  "12 warn pnpm:install-check": {
+    "message": "Unsupported platform for /esbuild-darwin-arm64/0.14.47: wanted {\"cpu\":[\"arm64\"],\"os\":[\"darwin\"],\"libc\":[\"any\"]} (current: {\"os\":\"linux\",\"cpu\":\"x64\",\"libc\":\"glibc\"})",
+    "prefix": "/home/thrizzle/website"
+  },
+  "13 debug pnpm:skipped-optional-dependency": {
+    "details": "Error: Unsupported platform for /esbuild-darwin-arm64/0.14.47: wanted {\"cpu\":[\"arm64\"],\"os\":[\"darwin\"],\"libc\":[\"any\"]} (current: {\"os\":\"linux\",\"cpu\":\"x64\",\"libc\":\"glibc\"})",
+    "package": {
+      "id": "/esbuild-darwin-arm64/0.14.47",
+      "name": "esbuild-darwin-arm64",
+      "version": "0.14.47"
+    },
+    "prefix": "/home/thrizzle/website",
+    "reason": "unsupported_platform"
+  },
+  "14 warn pnpm:install-check": {
+    "message": "Unsupported platform for /esbuild-freebsd-64/0.14.47: wanted {\"cpu\":[\"x64\"],\"os\":[\"freebsd\"],\"libc\":[\"any\"]} (current: {\"os\":\"linux\",\"cpu\":\"x64\",\"libc\":\"glibc\"})",
+    "prefix": "/home/thrizzle/website"
+  },
+  "15 debug pnpm:skipped-optional-dependency": {
+    "details": "Error: Unsupported platform for /esbuild-freebsd-64/0.14.47: wanted {\"cpu\":[\"x64\"],\"os\":[\"freebsd\"],\"libc\":[\"any\"]} (current: {\"os\":\"linux\",\"cpu\":\"x64\",\"libc\":\"glibc\"})",
+    "package": {
+      "id": "/esbuild-freebsd-64/0.14.47",
+      "name": "esbuild-freebsd-64",
+      "version": "0.14.47"
+    },
+    "prefix": "/home/thrizzle/website",
+    "reason": "unsupported_platform"
+  },
+  "16 warn pnpm:install-check": {
+    "message": "Unsupported platform for /esbuild-freebsd-arm64/0.14.47: wanted {\"cpu\":[\"arm64\"],\"os\":[\"freebsd\"],\"libc\":[\"any\"]} (current: {\"os\":\"linux\",\"cpu\":\"x64\",\"libc\":\"glibc\"})",
+    "prefix": "/home/thrizzle/website"
+  },
+  "17 debug pnpm:skipped-optional-dependency": {
+    "details": "Error: Unsupported platform for /esbuild-freebsd-arm64/0.14.47: wanted {\"cpu\":[\"arm64\"],\"os\":[\"freebsd\"],\"libc\":[\"any\"]} (current: {\"os\":\"linux\",\"cpu\":\"x64\",\"libc\":\"glibc\"})",
+    "package": {
+      "id": "/esbuild-freebsd-arm64/0.14.47",
+      "name": "esbuild-freebsd-arm64",
+      "version": "0.14.47"
+    },
+    "prefix": "/home/thrizzle/website",
+    "reason": "unsupported_platform"
+  },
+  "18 warn pnpm:install-check": {
+    "message": "Unsupported platform for /esbuild-linux-32/0.14.47: wanted {\"cpu\":[\"ia32\"],\"os\":[\"linux\"],\"libc\":[\"any\"]} (current: {\"os\":\"linux\",\"cpu\":\"x64\",\"libc\":\"glibc\"})",
+    "prefix": "/home/thrizzle/website"
+  },
+  "19 debug pnpm:skipped-optional-dependency": {
+    "details": "Error: Unsupported platform for /esbuild-linux-32/0.14.47: wanted {\"cpu\":[\"ia32\"],\"os\":[\"linux\"],\"libc\":[\"any\"]} (current: {\"os\":\"linux\",\"cpu\":\"x64\",\"libc\":\"glibc\"})",
+    "package": {
+      "id": "/esbuild-linux-32/0.14.47",
+      "name": "esbuild-linux-32",
+      "version": "0.14.47"
+    },
+    "prefix": "/home/thrizzle/website",
+    "reason": "unsupported_platform"
+  },
+  "20 warn pnpm:install-check": {
+    "message": "Unsupported platform for /esbuild-linux-arm/0.14.47: wanted {\"cpu\":[\"arm\"],\"os\":[\"linux\"],\"libc\":[\"any\"]} (current: {\"os\":\"linux\",\"cpu\":\"x64\",\"libc\":\"glibc\"})",
+    "prefix": "/home/thrizzle/website"
+  },
+  "21 debug pnpm:skipped-optional-dependency": {
+    "details": "Error: Unsupported platform for /esbuild-linux-arm/0.14.47: wanted {\"cpu\":[\"arm\"],\"os\":[\"linux\"],\"libc\":[\"any\"]} (current: {\"os\":\"linux\",\"cpu\":\"x64\",\"libc\":\"glibc\"})",
+    "package": {
+      "id": "/esbuild-linux-arm/0.14.47",
+      "name": "esbuild-linux-arm",
+      "version": "0.14.47"
+    },
+    "prefix": "/home/thrizzle/website",
+    "reason": "unsupported_platform"
+  },
+  "22 warn pnpm:install-check": {
+    "message": "Unsupported platform for /esbuild-linux-arm64/0.14.47: wanted {\"cpu\":[\"arm64\"],\"os\":[\"linux\"],\"libc\":[\"any\"]} (current: {\"os\":\"linux\",\"cpu\":\"x64\",\"libc\":\"glibc\"})",
+    "prefix": "/home/thrizzle/website"
+  },
+  "23 debug pnpm:skipped-optional-dependency": {
+    "details": "Error: Unsupported platform for /esbuild-linux-arm64/0.14.47: wanted {\"cpu\":[\"arm64\"],\"os\":[\"linux\"],\"libc\":[\"any\"]} (current: {\"os\":\"linux\",\"cpu\":\"x64\",\"libc\":\"glibc\"})",
+    "package": {
+      "id": "/esbuild-linux-arm64/0.14.47",
+      "name": "esbuild-linux-arm64",
+      "version": "0.14.47"
+    },
+    "prefix": "/home/thrizzle/website",
+    "reason": "unsupported_platform"
+  },
+  "24 warn pnpm:install-check": {
+    "message": "Unsupported platform for /esbuild-linux-mips64le/0.14.47: wanted {\"cpu\":[\"mips64el\"],\"os\":[\"linux\"],\"libc\":[\"any\"]} (current: {\"os\":\"linux\",\"cpu\":\"x64\",\"libc\":\"glibc\"})",
+    "prefix": "/home/thrizzle/website"
+  },
+  "25 debug pnpm:skipped-optional-dependency": {
+    "details": "Error: Unsupported platform for /esbuild-linux-mips64le/0.14.47: wanted {\"cpu\":[\"mips64el\"],\"os\":[\"linux\"],\"libc\":[\"any\"]} (current: {\"os\":\"linux\",\"cpu\":\"x64\",\"libc\":\"glibc\"})",
+    "package": {
+      "id": "/esbuild-linux-mips64le/0.14.47",
+      "name": "esbuild-linux-mips64le",
+      "version": "0.14.47"
+    },
+    "prefix": "/home/thrizzle/website",
+    "reason": "unsupported_platform"
+  },
+  "26 warn pnpm:install-check": {
+    "message": "Unsupported platform for /esbuild-linux-ppc64le/0.14.47: wanted {\"cpu\":[\"ppc64\"],\"os\":[\"linux\"],\"libc\":[\"any\"]} (current: {\"os\":\"linux\",\"cpu\":\"x64\",\"libc\":\"glibc\"})",
+    "prefix": "/home/thrizzle/website"
+  },
+  "27 debug pnpm:skipped-optional-dependency": {
+    "details": "Error: Unsupported platform for /esbuild-linux-ppc64le/0.14.47: wanted {\"cpu\":[\"ppc64\"],\"os\":[\"linux\"],\"libc\":[\"any\"]} (current: {\"os\":\"linux\",\"cpu\":\"x64\",\"libc\":\"glibc\"})",
+    "package": {
+      "id": "/esbuild-linux-ppc64le/0.14.47",
+      "name": "esbuild-linux-ppc64le",
+      "version": "0.14.47"
+    },
+    "prefix": "/home/thrizzle/website",
+    "reason": "unsupported_platform"
+  },
+  "28 warn pnpm:install-check": {
+    "message": "Unsupported platform for /esbuild-linux-riscv64/0.14.47: wanted {\"cpu\":[\"riscv64\"],\"os\":[\"linux\"],\"libc\":[\"any\"]} (current: {\"os\":\"linux\",\"cpu\":\"x64\",\"libc\":\"glibc\"})",
+    "prefix": "/home/thrizzle/website"
+  },
+  "29 debug pnpm:skipped-optional-dependency": {
+    "details": "Error: Unsupported platform for /esbuild-linux-riscv64/0.14.47: wanted {\"cpu\":[\"riscv64\"],\"os\":[\"linux\"],\"libc\":[\"any\"]} (current: {\"os\":\"linux\",\"cpu\":\"x64\",\"libc\":\"glibc\"})",
+    "package": {
+      "id": "/esbuild-linux-riscv64/0.14.47",
+      "name": "esbuild-linux-riscv64",
+      "version": "0.14.47"
+    },
+    "prefix": "/home/thrizzle/website",
+    "reason": "unsupported_platform"
+  },
+  "30 warn pnpm:install-check": {
+    "message": "Unsupported platform for /esbuild-linux-s390x/0.14.47: wanted {\"cpu\":[\"s390x\"],\"os\":[\"linux\"],\"libc\":[\"any\"]} (current: {\"os\":\"linux\",\"cpu\":\"x64\",\"libc\":\"glibc\"})",
+    "prefix": "/home/thrizzle/website"
+  },
+  "31 debug pnpm:skipped-optional-dependency": {
+    "details": "Error: Unsupported platform for /esbuild-linux-s390x/0.14.47: wanted {\"cpu\":[\"s390x\"],\"os\":[\"linux\"],\"libc\":[\"any\"]} (current: {\"os\":\"linux\",\"cpu\":\"x64\",\"libc\":\"glibc\"})",
+    "package": {
+      "id": "/esbuild-linux-s390x/0.14.47",
+      "name": "esbuild-linux-s390x",
+      "version": "0.14.47"
+    },
+    "prefix": "/home/thrizzle/website",
+    "reason": "unsupported_platform"
+  },
+  "32 warn pnpm:install-check": {
+    "message": "Unsupported platform for /esbuild-netbsd-64/0.14.47: wanted {\"cpu\":[\"x64\"],\"os\":[\"netbsd\"],\"libc\":[\"any\"]} (current: {\"os\":\"linux\",\"cpu\":\"x64\",\"libc\":\"glibc\"})",
+    "prefix": "/home/thrizzle/website"
+  },
+  "33 debug pnpm:skipped-optional-dependency": {
+    "details": "Error: Unsupported platform for /esbuild-netbsd-64/0.14.47: wanted {\"cpu\":[\"x64\"],\"os\":[\"netbsd\"],\"libc\":[\"any\"]} (current: {\"os\":\"linux\",\"cpu\":\"x64\",\"libc\":\"glibc\"})",
+    "package": {
+      "id": "/esbuild-netbsd-64/0.14.47",
+      "name": "esbuild-netbsd-64",
+      "version": "0.14.47"
+    },
+    "prefix": "/home/thrizzle/website",
+    "reason": "unsupported_platform"
+  },
+  "34 warn pnpm:install-check": {
+    "message": "Unsupported platform for /esbuild-openbsd-64/0.14.47: wanted {\"cpu\":[\"x64\"],\"os\":[\"openbsd\"],\"libc\":[\"any\"]} (current: {\"os\":\"linux\",\"cpu\":\"x64\",\"libc\":\"glibc\"})",
+    "prefix": "/home/thrizzle/website"
+  },
+  "35 debug pnpm:skipped-optional-dependency": {
+    "details": "Error: Unsupported platform for /esbuild-openbsd-64/0.14.47: wanted {\"cpu\":[\"x64\"],\"os\":[\"openbsd\"],\"libc\":[\"any\"]} (current: {\"os\":\"linux\",\"cpu\":\"x64\",\"libc\":\"glibc\"})",
+    "package": {
+      "id": "/esbuild-openbsd-64/0.14.47",
+      "name": "esbuild-openbsd-64",
+      "version": "0.14.47"
+    },
+    "prefix": "/home/thrizzle/website",
+    "reason": "unsupported_platform"
+  },
+  "36 warn pnpm:install-check": {
+    "message": "Unsupported platform for /esbuild-sunos-64/0.14.47: wanted {\"cpu\":[\"x64\"],\"os\":[\"sunos\"],\"libc\":[\"any\"]} (current: {\"os\":\"linux\",\"cpu\":\"x64\",\"libc\":\"glibc\"})",
+    "prefix": "/home/thrizzle/website"
+  },
+  "37 debug pnpm:skipped-optional-dependency": {
+    "details": "Error: Unsupported platform for /esbuild-sunos-64/0.14.47: wanted {\"cpu\":[\"x64\"],\"os\":[\"sunos\"],\"libc\":[\"any\"]} (current: {\"os\":\"linux\",\"cpu\":\"x64\",\"libc\":\"glibc\"})",
+    "package": {
+      "id": "/esbuild-sunos-64/0.14.47",
+      "name": "esbuild-sunos-64",
+      "version": "0.14.47"
+    },
+    "prefix": "/home/thrizzle/website",
+    "reason": "unsupported_platform"
+  },
+  "38 warn pnpm:install-check": {
+    "message": "Unsupported platform for /esbuild-windows-32/0.14.47: wanted {\"cpu\":[\"ia32\"],\"os\":[\"win32\"],\"libc\":[\"any\"]} (current: {\"os\":\"linux\",\"cpu\":\"x64\",\"libc\":\"glibc\"})",
+    "prefix": "/home/thrizzle/website"
+  },
+  "39 debug pnpm:skipped-optional-dependency": {
+    "details": "Error: Unsupported platform for /esbuild-windows-32/0.14.47: wanted {\"cpu\":[\"ia32\"],\"os\":[\"win32\"],\"libc\":[\"any\"]} (current: {\"os\":\"linux\",\"cpu\":\"x64\",\"libc\":\"glibc\"})",
+    "package": {
+      "id": "/esbuild-windows-32/0.14.47",
+      "name": "esbuild-windows-32",
+      "version": "0.14.47"
+    },
+    "prefix": "/home/thrizzle/website",
+    "reason": "unsupported_platform"
+  },
+  "40 warn pnpm:install-check": {
+    "message": "Unsupported platform for /esbuild-windows-64/0.14.47: wanted {\"cpu\":[\"x64\"],\"os\":[\"win32\"],\"libc\":[\"any\"]} (current: {\"os\":\"linux\",\"cpu\":\"x64\",\"libc\":\"glibc\"})",
+    "prefix": "/home/thrizzle/website"
+  },
+  "41 debug pnpm:skipped-optional-dependency": {
+    "details": "Error: Unsupported platform for /esbuild-windows-64/0.14.47: wanted {\"cpu\":[\"x64\"],\"os\":[\"win32\"],\"libc\":[\"any\"]} (current: {\"os\":\"linux\",\"cpu\":\"x64\",\"libc\":\"glibc\"})",
+    "package": {
+      "id": "/esbuild-windows-64/0.14.47",
+      "name": "esbuild-windows-64",
+      "version": "0.14.47"
+    },
+    "prefix": "/home/thrizzle/website",
+    "reason": "unsupported_platform"
+  },
+  "42 warn pnpm:install-check": {
+    "message": "Unsupported platform for /esbuild-windows-arm64/0.14.47: wanted {\"cpu\":[\"arm64\"],\"os\":[\"win32\"],\"libc\":[\"any\"]} (current: {\"os\":\"linux\",\"cpu\":\"x64\",\"libc\":\"glibc\"})",
+    "prefix": "/home/thrizzle/website"
+  },
+  "43 debug pnpm:skipped-optional-dependency": {
+    "details": "Error: Unsupported platform for /esbuild-windows-arm64/0.14.47: wanted {\"cpu\":[\"arm64\"],\"os\":[\"win32\"],\"libc\":[\"any\"]} (current: {\"os\":\"linux\",\"cpu\":\"x64\",\"libc\":\"glibc\"})",
+    "package": {
+      "id": "/esbuild-windows-arm64/0.14.47",
+      "name": "esbuild-windows-arm64",
+      "version": "0.14.47"
+    },
+    "prefix": "/home/thrizzle/website",
+    "reason": "unsupported_platform"
+  },
+  "44 warn pnpm:install-check": {
+    "message": "Unsupported engine for /@sveltejs/kit/1.0.0-next.354_svelte@3.48.0: wanted: {\"node\":\">=16.7\"} (current: {\"node\":\"v14.19.2\",\"pnpm\":\"7.5.0\"})",
+    "prefix": "/home/thrizzle/website"
+  },
+  "45 error pnpm": {
+    "code": "ERR_PNPM_UNSUPPORTED_ENGINE",
+    "packageId": "/@sveltejs/kit/1.0.0-next.354_svelte@3.48.0",
+    "wanted": {
+      "node": ">=16.7"
+    },
+    "current": {
+      "node": "v14.19.2",
+      "pnpm": "7.5.0"
+    },
+    "err": {
+      "name": "pnpm",
+      "message": "Unsupported engine for /@sveltejs/kit/1.0.0-next.354_svelte@3.48.0: wanted: {\"node\":\">=16.7\"} (current: {\"node\":\"v14.19.2\",\"pnpm\":\"7.5.0\"})",
+      "code": "ERR_PNPM_UNSUPPORTED_ENGINE",
+      "stack": "pnpm: Unsupported engine for /@sveltejs/kit/1.0.0-next.354_svelte@3.48.0: wanted: {\"node\":\">=16.7\"} (current: {\"node\":\"v14.19.2\",\"pnpm\":\"7.5.0\"})\n    at checkEngine (/snapshot/dist/pnpm.cjs)\n    at checkPackage (/snapshot/dist/pnpm.cjs)\n    at packageIsInstallable (/snapshot/dist/pnpm.cjs)\n    at pkgAllDeps (/snapshot/dist/pnpm.cjs)\n    at pickPkgsWithAllDeps (/snapshot/dist/pnpm.cjs)\n    at filterByImportersAndEngine (/snapshot/dist/pnpm.cjs)\n    at /snapshot/dist/pnpm.cjs\n    at async _install (/snapshot/dist/pnpm.cjs)\n    at async mutateModules (/snapshot/dist/pnpm.cjs)\n    at async install (/snapshot/dist/pnpm.cjs)"
+    }
+  }
+}

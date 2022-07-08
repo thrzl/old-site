@@ -1,7 +1,7 @@
 export default {
-    server: {
-        fs: {
-            allow: ["./static"]
-        }
-    }
-}
+	server: {
+		fs: {
+			allow: ['./static']
+		}
+	}
+};

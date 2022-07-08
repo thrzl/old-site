@@ -1,7 +1,7 @@
 <script>
-    import "../app.css";
-    import "@fontsource/poppins/400.css"
-    import "@fontsource/poppins/700.css"
-  </script>
-  
-  <slot />
+	import '../app.css';
+	import '@fontsource/poppins/400.css';
+	import '@fontsource/poppins/700.css';
+</script>
+
+<slot />
