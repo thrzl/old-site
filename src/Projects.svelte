@@ -34,7 +34,6 @@
 {:else}
 	<div class="mt-3 grid gap-4 grid-cols-1 lg:grid-cols-2 w-full">
 		{#each $data.repos as repo, i (repo.name)}
-		{console.log(repo.language_color)}
 			<div>
 				<a class="w-full h-full whitespace-nowrap md:text-left text-center" href={repo.link}>
 					<div
