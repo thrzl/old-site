@@ -47,10 +47,12 @@
 @keyframes rise {
 	0% {
 		transform: translate3d(0, 110%, 0);
+		opacity: 0;
 	}
 
 	100% {
 		transform: translate3d(0, 0, 0);
+		opacity: 1;
 	}
 }
 
@@ -62,4 +64,8 @@
 	animation-duration: 1000ms;
 	animation-delay: var(--delay);
 	animation-fill-mode: forwards;
+}
+
+a {
+	@apply transition-all duration-500 border-b-2 p-0 border-gray-500 hover:border-white
 }

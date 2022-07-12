@@ -37,8 +37,7 @@
 			<div>
 				<a class="w-full h-full whitespace-nowrap md:text-left text-center" href={repo.link}>
 					<div
-						class="border-0 duration-500 -translate-y-0 hover:-translate-y-2 relative rounded-lg shadow-none fontcalc h-full w-full p-5"
-						style={`background-color: ${repo.language_color}`}
+						class="border-0 duration-500 -translate-y-0 hover:-translate-y-2 relative rounded-lg shadow-none fontcalc h-full w-full p-5 bg-neutral-800"
 					>
 						<h2 class="text-white font-bold inline w-min md:w-full md:block truncate">
 							{repo.name.toLowerCase()}
@@ -52,7 +51,7 @@
 						>
 							⭐ {repo.stars}
 						</h4>
-						<h5 class="md:fixed inline font-bold w-max text-sm md:bottom-3 md:left-5 md:clear-both">
+						<h5 class="md:fixed inline font-bold w-max text-sm md:bottom-3 md:left-5 md:clear-both" style={`color: ${repo.language_color}`}>
 							{repo.language.toLowerCase()}
 						</h5>
 					</div>
