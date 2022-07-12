@@ -42,6 +42,6 @@
 				music
 			</a>
 		</div>
-		<p class="text-base my-3 text-left font-bold w-1/2">hey there! you've probably never heard of me, but i make random things on the net. i use rust, docker, python, go, and of course javascript. you can check out 🔨 <a href="/projects" class="text-gradient bg-gradient-to-br underline from-purple-600 to-indigo-400 border-indigo-400 hover:border-purple-600">some of my projects</a>, or 🎵 <a href="/projects" class="text-gradient bg-gradient-to-br underline from-orange-600 to-orange-400 border-orange-400 hover:border-orange-600">see what i've been listening to</a>. thanks for reading!</p>
+		<p class="text-base my-3 text-left font-bold w-1/2">hey there! you've probably never heard of me, but i make random things on the net. i use rust, docker, python, go, and of course javascript. you can check out 🔨 <a href="/projects" class="text-gradient bg-gradient-to-br underline from-purple-600 to-indigo-400 border-indigo-400 hover:border-purple-600">some of my projects</a>, or 🎵 <a href="/music" class="text-gradient bg-gradient-to-br underline from-orange-600 to-orange-400 border-orange-400 hover:border-orange-600">see what i've been listening to</a>. thanks for reading!</p>
 	</header>
 </div>
