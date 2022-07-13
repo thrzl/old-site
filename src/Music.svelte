@@ -20,7 +20,7 @@
                     <div class="bg-slate-900 rounded-lg overflow-hidden">
                         <img
                             src={track.image}
-                            alt={track.name}
+                            alt={`${track.name} cover art`}
                             class="rounded-lg transition duration-300 group-hover:scale-[1.02] group-hover:blur-sm"
                         />
                     </div>
@@ -53,7 +53,13 @@
                     class="border-0 group relative snap-start snap-always rounded-lg before:absolute max-h-min before:inset-0 before:z-10 before:bg-black before:opacity-0 before:transition before:duration-300 hover:before:opacity-50"
                     style={`--delay: ${i * 100 + 200}ms`}
                 >
-                    <div class="bg-slate-900 rounded-lg overflow-hidden h-56 w-56"></div>
+                    <div class="bg-slate-900 rounded-lg overflow-hidden">
+                        <img
+                            src={"../../static/music.webp"}
+                            alt={"music note picture"}
+                            class="rounded-lg transition duration-300 group-hover:scale-[1.02] group-hover:blur-sm"
+                        />
+                    </div>
                     <div class="z-20 absolute inset-2 md:inset-4 flex flex-col justify-center transition duration-300 scale-95 opacity-0 group-hover:scale-100 group-hover:opacity-100 lowercase">
                         <p class="font-bold text-xl md:text-2xl truncate leading-none md:leading-none mb-1">
                             loading
