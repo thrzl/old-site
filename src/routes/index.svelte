@@ -1,6 +1,6 @@
 <script>
 	import profilePic from '../../static/logo192.webp';
-	const title = "heyo, i'm thrizzle.";
+	const title = "👋🏽 heyo, i'm thrizzle.";
 </script>
 
 <div class="App bg-black text-white">
@@ -12,7 +12,7 @@
 			class="rounded-full relative"
 			alt="profile"
 		/>
-		<h1 class="headertext mt-2 font-bold sm:tagline m-0 sm:text-small rise-wrapper">
+		<h1 class="headertext mt-2 font-bold text-5xl sm:tagline m-0 rise-wrapper whitespace-pre">
 			{#each title.split(' ') as word, index}
 				<span class="rise-anim inline-flex" style={`--delay: ${index * 100 + 100}ms`}
 					>{`${word}`}{index !== title.split(' ').length - 1 ? ' ' : ''}</span

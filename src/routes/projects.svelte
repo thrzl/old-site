@@ -9,7 +9,7 @@
 <div class="App bg-black">
 	
 	<header class="App-header m-auto">
-		<h1 class="headertext my-2 font-bold sm:tagline m-0 sm:text-small rise-wrapper">
+		<h1 class="headertext mt-2 font-bold text-5xl sm:tagline m-0 rise-wrapper whitespace-pre">
 			{#each title as letter, index}
 				<span class="rise-anim inline-flex" style={`--delay: ${index * 100 + 100}ms`}
 					>{`${letter}`}</span

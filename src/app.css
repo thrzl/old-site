@@ -8,7 +8,7 @@
 		-webkit-text-fill-color: transparent;
 	}
 	.tagline {
-		font-size: calc(20px + 2vmin);
+		font-size: calc(50px + 2vmin);
 	}
 	.headertext {
 		line-height: calc(1em + 2vmin);
@@ -30,7 +30,7 @@
 
 .App-header {
 	@apply mx-auto min-h-screen flex flex-col items-center justify-center text-white lg:max-w-screen-xl w-screen;
-	font-size: calc(10px + 2vmin);
+	/*font-size: calc(10px + 2vmin);*/
 }
 
 @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
@@ -57,8 +57,9 @@
 }
 
 .rise-anim {
-	white-space: pre;
+	/*white-space: pre;*/
 	transform: translate3d(0, 110%, 0);
+	opacity: 0;
 	animation-name: rise;
 	animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	animation-duration: 1000ms;
@@ -69,3 +70,9 @@
 a {
 	@apply transition-all duration-500 border-b-2 p-0 border-gray-500 hover:border-white
 }
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+scrollbar {scrollbar-width: none;}
