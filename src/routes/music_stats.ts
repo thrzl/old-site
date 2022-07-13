@@ -1,8 +1,8 @@
 /** @type {import('@sveltejs/kit').RequestHandler} */
 export async function get() {
-	const topArtistsRes = await fetch(`http://ws.audioscrobbler.com/2.0/?method=user.getTopArtists&api_key=${process.env.LASTFM_API_KEY}&format=json&period=1month&limit=1&user=thrzl`);
+	const topArtistsRes = await fetch(`http://ws.audioscrobbler.com/2.0/?method=user.getTopArtists&api_key=${process.env.LASTFM_API_KEY}&format=json&period=1week&limit=1&user=thrzl`);
 	const topArtists = await topArtistsRes.json();
-	const topTracksRes = await fetch(`http://ws.audioscrobbler.com/2.0/?method=user.getTopTracks&api_key=${process.env.LASTFM_API_KEY}&format=json&period=1month&limit=3&user=thrzl`);
+	const topTracksRes = await fetch(`http://ws.audioscrobbler.com/2.0/?method=user.getTopTracks&api_key=${process.env.LASTFM_API_KEY}&format=json&period=1week&limit=3&user=thrzl`);
 	const topTracks = await topTracksRes.json();
 	for (const trackn in topTracks.toptracks.track) {
 		const track = topTracks.toptracks.track[trackn];
