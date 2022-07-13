@@ -1,6 +1,7 @@
 <script lang="ts">
   import { useSWR } from "sswr";
   const { data: lastfm } = useSWR("/music_stats");
+  import musicNote from "../static/music.webp"
 </script>
 
 {#if $lastfm}
@@ -55,7 +56,7 @@
                 >
                     <div class="bg-slate-900 rounded-lg overflow-hidden">
                         <img
-                            src={"../../static/music.webp"}
+                            src={musicNote}
                             alt={"music note picture"}
                             class="rounded-lg transition duration-300 group-hover:scale-[1.02] group-hover:blur-sm"
                         />
