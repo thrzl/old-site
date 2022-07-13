@@ -17,7 +17,7 @@
 				<h3 class="mb-0.5 truncate">
 					listening to <span class="font-bold lowercase">{music.song}</span>
 				</h3>
-				<h4 class="mb-0.5 truncate">on <span class="font-bold lowercase">{music.album.large_text}</span></h4>
+				<h4 class="mb-0.5 truncate">on <span class="font-bold lowercase">{music.album}</span></h4>
 				<h4 class="mb-0.5 truncate">by <span class="font-bold lowercase">{music.artist}</span></h4>
 			</div>
 		</div>
