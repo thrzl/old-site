@@ -1,6 +1,6 @@
 <script lang="ts">
   import { useSWR } from "sswr";
-  const { data: lastfm } = useSWR("/music_stats");
+  const { data: lastfm } = useSWR("/api/music_stats");
   import musicNote from "../static/music.webp"
 </script>
 

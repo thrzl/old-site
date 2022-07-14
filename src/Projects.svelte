@@ -1,6 +1,6 @@
 <script>
 	import { useSWR } from 'sswr';
-	const { data: data } = useSWR('/pinned_repos');
+	const { data: data } = useSWR('/api/pinned_repos');
 </script>
 
 {#if !$data}
