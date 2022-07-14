@@ -36,7 +36,7 @@
 	}
 </script>
 
-{#if p && p.name.toLowerCase() !== 'moosync'}
+{#if p && p.name?.toLowerCase() !== 'moosync'}
 	<div
 		class="hidden bg-cover bg-center lg:flex hover:-translate-y-1 text-white max-w-xs min-h-max rounded-lg place-content-center transition-all ease-in-out duration-500 no-repeat w-max bg-indigo-800 border-0 absolute left-5 bottom-5 overflow-clip"
 		style={`background-image: url(${p.image})`}
@@ -45,9 +45,9 @@
 			class="justify-center presence min-h-full backdrop-blur-sm backdrop-brightness-75 rounded-md p-5"
 		>
 			<div class="p-3 place-content-start text-left text-base">
-				<h3 class="mb-0.5 font-bold">{p.name.toLowerCase()}</h3>
-				<h4 class="mb-0.5">{p.details.toLowerCase()}</h4>
-				<h4 class="mb-0.5">{p.state ? p.state.toLowerCase() : null}</h4>
+				<h3 class="mb-0.5 lowercase font-bold">{p.nam}</h3>
+				<h4 class="mb-0.5 lowercase">{p.detail}</h4>
+				<h4 class="mb-0.5 lowercase">{p.state ? p.stat : null}</h4>
 			</div>
 		</div>
 	</div>
