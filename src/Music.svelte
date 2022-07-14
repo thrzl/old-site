@@ -20,7 +20,7 @@
                 >
                     <div class="bg-slate-900 rounded-lg overflow-hidden">
                         <img
-                            src={track.image}
+                            src={track.image || musicNote}
                             alt={`${track.name} cover art`}
                             class="rounded-lg transition duration-300 group-hover:scale-[1.02] group-hover:blur-sm"
                         />
