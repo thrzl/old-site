@@ -21,7 +21,7 @@
 		</h1>
 		<div class="links flex text-base align-middle font-mono h-min-content rise-wrapper font-bold transition-all duration-500 ease-in-out">
 			<a
-				href="blog.thrzl.xyz"
+				href="https://blog.thrzl.xyz"
 				class="text-gradient my-3 mx-6 from-blue-600 to-blue-400 bg-gradient-to-br transition-all leading-tight scale-110 rise-anim inline-flex border-blue-400 hover:border-blue-600"
 				style={`--delay: ${(title.split(' ').length+1) * 100 + 100}ms`}
 			>
