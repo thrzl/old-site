@@ -1,9 +1,12 @@
 <script>
-	import { useSWR } from 'sswr';
-	const { data: data } = useSWR('/api/pinned_repos');
+	async function getProjects() {
+    	const res = await fetch("/api/pinned_repos");
+    	return await res.json();
+  	}
+	const projects = getProjects();
 </script>
 
-{#if !$data}
+{#await projects}
 	<div class="mt-3 grid gap-4 grid-cols-1 lg:grid-cols-2 w-full">
 		{#each [...Array(6)] as _}
 			<div>
@@ -31,9 +34,9 @@
 			</div>
 		{/each}
 	</div>
-{:else}
+{:then data}
 	<div class="mt-3 grid gap-4 grid-cols-1 lg:grid-cols-2 w-full">
-		{#each $data.repos as repo, i (repo.name)}
+		{#each data.repos as repo, i (repo.name)}
 			<div>
 				<a class="w-full h-full whitespace-nowrap md:text-left text-center" href={repo.link}>
 					<div
@@ -59,4 +62,4 @@
 			</div>
 		{/each}
 	</div>
-{/if}
+{/await}

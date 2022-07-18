@@ -1,24 +1,37 @@
 <script lang="ts">
 	import { useSWR } from 'sswr';
 	const { data: activity } = useSWR('https://api.lanyard.rest/v1/users/536644802595520534');
+	let color;
 	$: data = $activity ? $activity.data : null;
 	$: music = data ? data.spotify : null;
 </script>
 
 {#if music}
 	<div
-		class="hidden bg-cover bg-neutral-900 bg-center lg:flex hover:-translate-y-1 text-white min-h-max rounded-lg place-content-center transition-all ease-in-out duration-500 no-repeat min-w-md border-0 absolute right-5 bottom-5 overflow-clip"
-		style={`background-image: url(${data.spotify.album_art_url})`}
+		class="hidden bg-cover bg-neutral-900 lg:flex text-white min-h-max rounded-lg place-content-center transition-all ease-in-out duration-500 no-repeat min-w-md border-0 absolute right-5 bottom-5 overflow-clip"
 	>
 		<div
-			class="justify-center backdrop-blur-sm backdrop-brightness-75 presence min-h-full overflow-clip p-5 rounded-md"
+			class="border-0 group relative snap-start snap-always rounded-lg before:absolute max-h-min before:inset-0 before:z-10 before:bg-black before:opacity-0 before:transition before:duration-300 hover:before:opacity-50"
 		>
-			<div class="p-3 place-content-start text-left text-white min-h-full">
-				<h3 class="mb-0.5 truncate">
-					listening to <span class="font-bold lowercase">{music.song}</span>
-				</h3>
-				<h4 class="mb-0.5 truncate">on <span class="font-bold lowercase">{music.album}</span></h4>
-				<h4 class="mb-0.5 truncate">by <span class="font-bold lowercase">{music.artist}</span></h4>
+			<div class="bg-slate-900 rounded-lg overflow-hidden w-fit-content max-h-64 max-w-sm">
+				<img
+					src={music.album_art_url}
+					alt={`${music.song} cover art`}
+					class="rounded-lg transition duration-300 m-auto group-hover:scale-[1.02] group-hover:blur-sm"
+					id="spotify-album-cover"
+				/>
+			</div>
+			<div class="z-20 absolute inset-2 md:inset-4 flex flex-col justify-center transition duration-300 scale-95 opacity-0 group-hover:scale-100 group-hover:opacity-100 lowercase items-center">
+				<p class="text-xl md:text-2xl truncate leading-none md:leading-none mb-1">
+					listening to <span class="font-bold">{music.song}</span>
+				</p>
+				<p
+					class="text-sm md:text-base leading-tight md:leading-tight opacity-80"
+				>
+					by <span class="font-bold">{music.artist}</span>
+				</p>
+				<p class="text-sm md:text-base leading-tight md:leading-tight opacity-80">on <span class="font-bold">{music.album}</span></p>
+				
 			</div>
 		</div>
 		<div class="absolute right-2 top-2">
