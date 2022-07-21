@@ -1,8 +1,8 @@
 <script>
 	async function getProjects() {
-    	const res = await fetch("/api/pinned_repos");
-    	return await res.json();
-  	}
+		const res = await fetch('/api/pinned_repos');
+		return await res.json();
+	}
 	const projects = getProjects();
 </script>
 
@@ -54,7 +54,10 @@
 						>
 							⭐ {repo.stars}
 						</h4>
-						<h5 class="md:fixed inline font-bold w-max text-sm md:bottom-3 md:left-5 md:clear-both lowercase" style={`color: ${repo.language_color}`}>
+						<h5
+							class="md:fixed inline font-bold w-max text-sm md:bottom-3 md:left-5 md:clear-both lowercase"
+							style={`color: ${repo.language_color}`}
+						>
 							{repo.language}
 						</h5>
 					</div>
