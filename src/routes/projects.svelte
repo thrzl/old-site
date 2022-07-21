@@ -3,11 +3,10 @@
 	import Projects from '../Projects.svelte';
 	import Presence from '../Presence.svelte';
 	import Spotify from '../Spotify.svelte';
-	const title = ["🔨 ", "p", "r", "o", "j", "e", "c", "t", "s"];
+	const title = ['🔨 ', 'p', 'r', 'o', 'j', 'e', 'c', 't', 's'];
 </script>
 
 <div class="App bg-black">
-	
 	<header class="App-header m-auto">
 		<h1 class="headertext mt-2 font-bold text-5xl sm:tagline m-0 rise-wrapper whitespace-pre">
 			{#each title as letter, index}

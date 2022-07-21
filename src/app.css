@@ -68,11 +68,13 @@
 }
 
 a {
-	@apply transition-all duration-500 border-b-2 p-0 border-gray-500 hover:border-white
+	@apply transition-all duration-500 border-b-2 p-0 border-gray-500 hover:border-white;
 }
 
 ::-webkit-scrollbar {
 	display: none;
 }
 
-scrollbar {scrollbar-width: none;}
+scrollbar {
+	scrollbar-width: none;
+}
