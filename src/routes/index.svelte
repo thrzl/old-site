@@ -43,6 +43,13 @@
 			>
 				music
 			</a>
+			<a
+				href="/resume"
+				class="text-gradient my-3 mx-6 from-gray-300 to-white bg-gradient-to-br transition-all leading-tight rise-anim inline-flex border-gray-400 hover:border-neutral-600"
+				style={`--delay: ${(title.split(' ').length + 2) * 100 + 100}ms`}
+			>
+				resume
+			</a>
 		</div>
 		<p class="text-base my-3 text-left font-bold w-1/2">
 			hey there! you've probably never heard of me, but i make random things on the net. i use rust,

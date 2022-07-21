@@ -1,14 +1,24 @@
+<svelte:head>
+	<title>my resume</title>
+</svelte:head>
+
+<script>
+	import profilePic from "../../static/logo192.webp"
+</script>
+
 <div class="bg-black text-white print:text-black">
+	<h1 class="mx-auto my-12 text-3xl max-w-max font-bold">📄 my resume</h1>
 	<div
-		class="p-6 mx-auto page max-w-3xl print:max-w-letter md:max-w-letter md:h-letter xsm:p-8 sm:p-9 md:p-16 bg-neutral-800 rounded-xl my-2"
+		class="p-6 mx-auto page max-w-3xl print:max-w-letter md:max-w-letter md:h-letter xsm:p-8 sm:p-9 md:p-16 bg-neutral-800 rounded-xl my-2 rise-wrapper"
 	>
-		<header class="flex items-center mb-8 md:mb-11">
+		<header class="flex items-center mb-8 md:mb-11 rise-wrapper">
 			<img
-				src="../static/logo192.webp"
+				src={profilePic}
 				alt="Profile"
-				class="rounded-full w-8 h-8 md:w-16 md:h-16"
+				class="rounded-full w-8 h-8 md:w-16 md:h-16 rise-anim"
+				style="--delay: 200ms"
 			/>
-			<h1 class="text-2xl font-semibold pb-px ml-4">terry</h1>
+			<h1 class="text-2xl font-semibold pb-px ml-4 rise-anim" style="--delay: 400ms">terry</h1>
 		</header>
 
 		<div
@@ -20,27 +30,11 @@
 						ABOUT ME
 					</h2>
 					<section class="mb-8 break-inside-avoid">
-						<header>
-							<h3 class="text-lg font-semibold">PYTHON DEVELOPMENT</h3>
-							<p class="leading-normal text-md text-gray-650">Since 2020</p>
-						</header>
 						<p class="mt-2 text-md leading-normal">
-							Minimal and formal résumé website template for print, mo&shy;bile, and desktop. The
-							proportions are the same on the screen and paper. Built with amazing <a
-								class="print:border-none"
-								href="https://tailwindcss.com/">Tailwind CSS</a
-							>.
+							Hey, I'm Terry, and I love tech! I first became interested in coding for game development, and quickly expanded from scratch to Python, Go, Javascript, and Rust. Something I pride myself on is my ability to write performant, typed, and well-formatted Python code.
 						</p>
 					</section>
 				</div>
-
-				<section class="mb-4 break-inside-avoid">
-					<header>
-						<h3 class="text-lg font-semibold">FRONTEND DEVELOPMENT</h3>
-						<p class="leading-normal text-md text-gray-650">Since 2021</p>
-					</header>
-					I very recently started working as a front-end developer. I created this website, this resume, and plenty of other things using web technologies such as <span class="text-red-400">Svelte</span>, <span class="text-sky-400">React</span>, and <span class="text-purple-400">Preact</span>.
-				</section>
 			</section>
 
 			<section class="mt-8 first:mt-0">
@@ -138,12 +132,10 @@
 									>
 								</a>
 							</h3>
-							<p class="leading-normal text-md text-gray-650">Since 2019 | Python</p>
+							<p class="leading-normal text-md text-gray-650">Since 2021 | Python</p>
 						</header>
 						<p class="mt-2 text-md leading-normal">
-							Good design is as little design as possible. Less, but better — because it
-							concentrates on the essential aspects, and the pro&shy;ducts are not burdened with
-							non-essentials.
+							I absolutely hated the Repl.it database wrapper for python. It felt slow, and wouldn't work a lot of the time. So, I decided to make my own. It caches and mutates all keys in the database and supports nested keys. It's strongly typed and is far faster than replit-py. It has approximately 10k total downloads on PyPI.
 						</p>
 					</section>
 				</div>
@@ -159,25 +151,10 @@
 								>
 							</a>
 						</h3>
-						<p class="leading-normal text-md text-gray-650">2017 | JavaScript</p>
+						<p class="leading-normal text-md text-gray-650">Since 2020 | Python</p>
 					</header>
 					<p class="mt-2 text-md leading-normal">
-						Good design is long-lasting. It avoids being fashionable and therefore never appears
-						antiquated.<br />
-						Good design is honest. It does not make a product more innovative, powerful or valuable than
-						it really is.
-					</p>
-				</section>
-
-
-				<section class="mb-4 break-inside-avoid">
-					<header>
-						<h3 class="text-lg font-semibold">Fantastic Project</h3>
-						<p class="leading-normal text-md text-gray-650">2012 | JavaScript</p>
-					</header>
-					<p class="mt-2 text-md leading-normal">
-						Strip steak tail capicola alcatra ground round tenderloin ar. Venison tri-tip porchetta,
-						brisket tenderloin pig beef.
+						One of my lesser maintained projects, discord-ext-forms was built around my annoyance of having to build forms and surveys in discord.py for things like bot setup. This module compresses hundreds of lines into a minimum of 3, making the task of bot/server setup in discord.py much easier.
 					</p>
 				</section>
 			</section>
