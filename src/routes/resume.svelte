@@ -52,7 +52,7 @@
 						<p class="mt-2 text-md leading-normal">
 							I have experience shredding confidential files and helping keep an office tidy. I also
 							work as a general IT agent and help to optimize and repair the office computers. I
-							also created the <a href="https://ey3.tech" class="print: border-none">company's website <span
+							also worked on the <a href="https://ey3.tech" class="print:border-none group">company's website <span
 										class="inline-block print:hidden text-gray-550 print:text-black font-normal group-hover:-translate-y-[0.125rem] group-hover:translate-x-[0.125rem] transition duration-500 ease-in-out"
 										>↗</span
 									></a>.

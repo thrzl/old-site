@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { useSWR } from 'sswr';
 	const { data: activity } = useSWR('https://api.lanyard.rest/v1/users/536644802595520534');
-	let color;
 	$: data = $activity ? $activity.data : null;
 	$: music = data ? data.spotify : null;
 </script>
@@ -24,10 +23,10 @@
 			<div
 				class="z-20 absolute inset-2 md:inset-4 flex flex-col justify-center transition duration-300 scale-95 opacity-0 group-hover:scale-100 group-hover:opacity-100 lowercase items-center"
 			>
-				<p class="text-xl md:text-2xl truncate leading-none md:leading-none mb-1">
+				<p class="text-xl md:text-2xl truncate leading-none md:leading-none mb-1 max-w-full">
 					listening to <span class="font-bold">{music.song}</span>
 				</p>
-				<p class="text-sm md:text-base leading-tight md:leading-tight opacity-80">
+				<p class="text-sm md:text-base text-center leading-tight md:leading-tight opacity-80 mx-auto">
 					by <span class="font-bold">{music.artist}</span>
 				</p>
 				<p class="text-sm md:text-base leading-tight md:leading-tight opacity-80">

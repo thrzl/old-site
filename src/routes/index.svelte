@@ -46,7 +46,7 @@
 			<a
 				href="/resume"
 				class="text-gradient my-3 mx-6 from-gray-300 to-white bg-gradient-to-br transition-all leading-tight rise-anim inline-flex border-gray-400 hover:border-neutral-600"
-				style={`--delay: ${(title.split(' ').length + 2) * 100 + 100}ms`}
+				style={`--delay: ${(title.split(' ').length + 4) * 100 + 100}ms`}
 			>
 				resume
 			</a>
