@@ -1,5 +1,10 @@
 <svelte:head>
 	<title>my resume</title>
+	<style>
+		#spotify, #presence {
+			display: none !important;
+		}
+	</style>
 </svelte:head>
 
 <script>
@@ -9,7 +14,7 @@
 <div class="bg-black text-white print:text-black">
 	<h1 class="mx-auto my-12 text-3xl max-w-max font-bold">📄 my resume</h1>
 	<div
-		class="p-6 mx-auto page max-w-3xl print:max-w-letter md:max-w-letter md:h-letter xsm:p-8 sm:p-9 md:p-16 bg-neutral-800 rounded-xl my-2 rise-wrapper"
+		class="p-6 mx-auto page max-w-3xl print:max-w-letter md:max-w-letter md:h-letter xsm:p-8 sm:p-9 md:p-16 bg-neutral-800 rounded-xl my-2 rise-wrapper mb-0 rounded-b-none"
 	>
 		<header class="flex items-center mb-8 md:mb-11 rise-wrapper">
 			<img
@@ -143,18 +148,18 @@
 				<section class="mb-4 break-inside-avoid">
 					<header>
 						<h3 class="text-lg font-semibold">
-							<a href="https://github.com/terabyte3/discord-ext-forms" class="group">
-								discord-ext-forms
+							<a href="https://github.com/terabyte3/reqwest.py" class="group">
+								reqwest.py
 								<span
 									class="inline-block text-gray-550 print:text-black font-normal group-hover:-translate-y-[0.125rem] group-hover:translate-x-[0.125rem] transition duration-500 ease-in-out"
 									>↗</span
 								>
 							</a>
 						</h3>
-						<p class="leading-normal text-md text-gray-650">Since 2020 | Python</p>
+						<p class="leading-normal text-md text-gray-650">Since 2022 | Rust & Python</p>
 					</header>
 					<p class="mt-2 text-md leading-normal">
-						One of my lesser maintained projects, discord-ext-forms was built around my annoyance of having to build forms and surveys in discord.py for things like bot setup. This module compresses hundreds of lines into a minimum of 3, making the task of bot/server setup in discord.py much easier.
+						Made in Rust, reqwest.py is my attempt to create much faster Python requests. It still struggles to beat urllib3, but it still uses less resources and beats out most other HTTP request libraries. It doesn't have a lot of features at the moment, but I've been working on it as a side project to help me learn rust.
 					</p>
 				</section>
 			</section>
