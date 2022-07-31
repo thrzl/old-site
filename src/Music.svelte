@@ -10,14 +10,14 @@
 {#await lastfm}
 	<div class="w-3/4 mx-auto">
 		<p class="text-base lowercase">
-			i've been listening to <span class="animate-pulse bg-gray-800 rounded-full">
-				<a class="font-bold invisible" href="https://last.fm"
-					>xhulooo</a
+			i've been listening to <span class="animate-pulse bg-[#141414] -p-1 rounded-full">
+				<p class="font-bold invisible inline"
+					>xhulooo</p
 				>
 			</span>
 			a lot lately. my favorite song right now is
-			<span class="animate-pulse bg-gray-800 rounded-full"><a class="font-bold invisible" href="https://last.fm"
-				>suburban - xhulooo</a
+			<span class="animate-pulse bg-[#141414] rounded-full"><p class="font-bold invisible inline"
+				>suburban - xhulooo</p
 			></span>
 		</p>
 		<div
@@ -45,10 +45,10 @@
 							class="z-20 absolute inset-2 md:inset-4 flex flex-col justify-center transition duration-300 scale-95 opacity-0 group-hover:scale-100 group-hover:opacity-100 lowercase"
 						>
 							<p class="font-bold text-xl md:text-2xl truncate leading-none md:leading-none mb-1">
-								suburban
+								loading
 							</p>
 							<p class="text-sm md:text-base leading-tight md:leading-tight opacity-80">
-								xhulooo
+								data
 							</p>
 						</div>
 					</a>
@@ -59,9 +59,10 @@
 {:then lastfm}
 	<div class="w-3/4 mx-auto">
 		<p class="text-base lowercase">
-			i've been listening to <a class="font-bold" href={lastfm.topArtist.link}
+			i've been listening to <a class="font-bold" href={lastfm.topArtist.url}
 				>{lastfm.topArtist.name}</a
 			>
+			{console.log(lastfm.topArtist.link)}
 			a lot lately. my favorite song right now is
 			<a class="font-bold" href={lastfm.topTracks[0].url}
 				>{lastfm.topTracks[0].name} - {lastfm.topTracks[0].artist.name}</a
