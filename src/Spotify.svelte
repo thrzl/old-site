@@ -12,18 +12,18 @@
 		<div
 			class="border-0 group relative snap-start snap-always rounded-lg before:absolute max-h-min before:inset-0 before:z-10 before:bg-black before:opacity-0 before:transition before:duration-300 hover:before:opacity-50"
 		>
-			<div class="bg-slate-900 rounded-lg overflow-hidden w-fit-content max-h-64 max-w-sm">
+			<div class="bg-slate-900 rounded-lg overflow-hidden h-64 w-64">
 				<img
 					src={music.album_art_url}
 					alt={`${music.song} cover art`}
-					class="rounded-lg transition duration-300 m-auto group-hover:scale-[1.02] group-hover:blur-sm"
+					class="rounded-lg transition duration-300 group-hover:scale-[1.02] group-hover:blur-sm"
 					id="spotify-album-cover"
 				/>
 			</div>
 			<div
 				class="z-20 absolute inset-2 md:inset-4 flex flex-col justify-center transition duration-300 scale-95 opacity-0 group-hover:scale-100 group-hover:opacity-100 lowercase items-center"
 			>
-				<p class="text-xl md:text-2xl truncate leading-none md:leading-none mb-1 max-w-full">
+				<p class="text-lg truncate leading-none md:leading-none mb-1 max-w-full">
 					listening to <span class="font-bold">{music.song}</span>
 				</p>
 				<p class="text-sm md:text-base text-center leading-tight md:leading-tight opacity-80 mx-auto">
