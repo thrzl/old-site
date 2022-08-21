@@ -4,7 +4,6 @@
 		return await res.json();
 	}
 	const lastfm = getMusic();
-	import musicNote from '../static/music.webp';
 </script>
 
 {#await lastfm}
@@ -36,7 +35,7 @@
 					>
 						<div class="bg-slate-900 rounded-lg animate-pulse overflow-hidden">
 							<img
-								src={musicNote}
+								src={'/music.webp'}
 								alt={`cover art placeholder`}
 								class="rounded-lg transition duration-300 group-hover:scale-[1.02] group-hover:blur-sm"
 							/>
@@ -84,7 +83,7 @@
 					>
 						<div class="bg-slate-900 rounded-lg overflow-hidden">
 							<img
-								src={track.image || musicNote}
+								src={track.image || '/music.webp'}
 								alt={`${track.name} cover art`}
 								class="rounded-lg transition duration-300 group-hover:scale-[1.02] group-hover:blur-sm"
 							/>
