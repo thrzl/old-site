@@ -40,7 +40,7 @@
 			<div>
 				<a class="w-full h-full whitespace-nowrap md:text-left text-center" href={repo.link}>
 					<div
-						class="border-0 duration-500 -translate-y-0 hover:-translate-y-2 relative rounded-lg shadow-none fontcalc h-full w-full p-5 bg-neutral-800"
+						class="border-0 duration-500 scale-100 hover:scale-105 relative rounded-lg shadow-none fontcalc h-full w-full p-5 bg-neutral-800"
 					>
 						<h2 class="text-white font-bold inline w-min md:w-full md:block truncate lowercase">
 							{repo.name}

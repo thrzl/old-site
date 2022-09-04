@@ -10,7 +10,7 @@
 	<header class="App-header m-auto">
 		<h1 class="headertext mt-2 font-bold text-5xl sm:tagline m-0 rise-wrapper whitespace-pre">
 			{#each title as letter, index}
-				<span class="rise-anim inline-flex" style={`--delay: ${index * 100 + 100}ms`}
+				<span class="rise-anim inline-flex" style={`--delay: ${index * 50 + 100}ms`}
 					>{`${letter}`}</span
 				>
 			{/each}

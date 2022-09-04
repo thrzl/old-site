@@ -37,7 +37,7 @@
 							<img
 								src={'/music.webp'}
 								alt={`cover art placeholder`}
-								class="rounded-lg transition duration-300 group-hover:scale-[1.02] group-hover:blur-sm"
+								class="rounded-lg transition duration-300 group-hover:scale-[1.05] group-hover:blur-sm"
 							/>
 						</div>
 						<div
@@ -59,7 +59,10 @@
 	<div class="w-3/4 mx-auto">
 		<p class="text-base lowercase">
 			i've been listening to <a class="font-bold" href={lastfm.topArtist.url}
-				>{lastfm.topArtist.name}</a
+				>
+				{#if !lastfm.topArtist.image[0]["#text"]}
+					<img src={lastfm.topArtist.image[0]["#text"]} alt="artist profile" class="rounded-full relative inline w-4"/> 
+				{/if} {lastfm.topArtist.name}</a
 			>
 			{console.log(lastfm.topArtist.link)}
 			a lot lately. my favorite song right now is
@@ -85,11 +88,11 @@
 							<img
 								src={track.image || '/music.webp'}
 								alt={`${track.name} cover art`}
-								class="rounded-lg transition duration-300 group-hover:scale-[1.02] group-hover:blur-sm"
+								class="rounded-lg transition duration-500 group-hover:scale-[1.03] group-hover:blur-sm"
 							/>
 						</div>
 						<div
-							class="z-20 absolute inset-2 md:inset-4 flex flex-col justify-center transition duration-300 scale-95 opacity-0 group-hover:scale-100 group-hover:opacity-100 lowercase"
+							class="z-20 absolute inset-2 md:inset-4 flex flex-col justify-center transition duration-500 scale-95 opacity-0 group-hover:scale-100 group-hover:opacity-100 lowercase"
 						>
 							<p class="font-bold text-xl md:text-2xl truncate leading-none md:leading-none mb-1">
 								{track.name}
