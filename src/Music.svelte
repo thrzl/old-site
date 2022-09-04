@@ -64,7 +64,6 @@
 					<img src={lastfm.topArtist.image[0]["#text"]} alt="artist profile" class="rounded-full relative inline w-4"/> 
 				{/if} {lastfm.topArtist.name}</a
 			>
-			{console.log(lastfm.topArtist.link)}
 			a lot lately. my favorite song right now is
 			<a class="font-bold" href={lastfm.topTracks[0].url}
 				>{lastfm.topTracks[0].name} - {lastfm.topTracks[0].artist.name}</a
