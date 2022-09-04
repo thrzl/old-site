@@ -15,8 +15,8 @@
 		<h1 class="headertext mt-2 font-bold text-5xl sm:tagline m-0 rise-wrapper whitespace-pre text-left">
 			{#each title.split(' ') as word, index}
 				{#if index === 0}
-					<span class="rise-anim md:inline-flex block " style={`--delay: ${index * 100 + 100}ms`}
-						>{`${word}`}{index !== title.split(' ').length - 1 ? ' ' : ''}</span
+					<span class="rise-anim md:inline-flex block" style={`--delay: ${index * 100 + 100}ms`}
+						><span class="wave m-2">{`${word}`} </span>{index !== title.split(' ').length - 1 ? ' ' : ''}</span
 					>
 				{:else if index !== 1}
 				<span class="rise-anim md:inline-flex block " style={`--delay: ${index * 100 + 100}ms`}
