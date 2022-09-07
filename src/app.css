@@ -16,7 +16,7 @@
 }
 
 * {
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Array', sans-serif;
 	@apply selection:bg-gray-400;
 }
 
@@ -97,4 +97,12 @@ scrollbar {
    50% { transform: rotate(10.0deg) }
    60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
   100% { transform: rotate( 0.0deg) }
+}
+
+@font-face {
+    font-family: 'Array';
+    src: url('../static/array-bold-sub.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+
 }
