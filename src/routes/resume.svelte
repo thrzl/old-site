@@ -4,6 +4,10 @@
 		#spotify, #presence {
 			display: none !important;
 		}
+
+		* {
+			font-family: "Poppins", sans-serif
+		}
 	</style>
 </svelte:head>
 
