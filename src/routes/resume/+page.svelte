@@ -12,7 +12,7 @@
 </svelte:head>
 
 <script>
-	import profilePic from "../../static/logo192.webp"
+	import profilePic from "/static/logo192.webp"
 </script>
 
 <div class="bg-black text-white print:text-black">
