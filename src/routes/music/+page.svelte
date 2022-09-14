@@ -1,6 +1,4 @@
 <script>
-	import profilePic from '../../static/logo192.webp';
-	const title = 'music';
 	import Music from '../Music.svelte';
 </script>
 

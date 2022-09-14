@@ -1,8 +1,5 @@
 <script>
-	import profilePic from '../../static/logo192.webp';
 	import Projects from '../Projects.svelte';
-	import Presence from '../Presence.svelte';
-	import Spotify from '../Spotify.svelte';
 	const title = ['🔨 ', 'p', 'r', 'o', 'j', 'e', 'c', 't', 's'];
 </script>
 
