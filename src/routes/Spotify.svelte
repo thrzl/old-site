@@ -1,8 +1,6 @@
 <script lang="ts">
-	import { useSWR } from 'sswr';
-	const { data: activity } = useSWR('https://api.lanyard.rest/v1/users/536644802595520534');
-	$: data = $activity ? $activity.data : null;
-	$: music = data ? data.spotify : null;
+	import type { Spotify } from "sk-lanyard";
+	export let music: Spotify | null;
 </script>
 
 {#if music}

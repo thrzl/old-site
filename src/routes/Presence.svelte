@@ -1,14 +1,13 @@
 <script lang="ts">
-	import { useSWR } from 'sswr';
-	const { data: activity } = useSWR('https://api.lanyard.rest/v1/users/536644802595520534');
-	$: act = $activity ? $activity.data.activities.filter((x) => x.type == 0)?.[0] : null;
+	import type {Activity} from "sk-lanyard";
+	export let act: Activity | null;
 	interface Presence {
 		image: string;
-		id: BigInt;
+		id: string | undefined;
 		name: string;
 		state: string;
 		details: string;
-		large_text: string;
+		large_text: string | null;
 	}
 	let p: Presence;
 	$: if (act) {
@@ -37,6 +36,7 @@
 </script>
 
 {#if p && p.name?.toLowerCase() !== 'moosync'}
+	{console.log(p)}
 	<div
 		class="hidden bg-cover bg-neutral-900 lg:flex text-white min-h-max rounded-lg place-content-center transition-all ease-in-out duration-500 no-repeat min-w-md border-0 absolute left-5 bottom-5 overflow-clip"
 	>
