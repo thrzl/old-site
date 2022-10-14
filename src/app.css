@@ -15,8 +15,17 @@
 	}
 }
 
-* {
-	font-family: 'Array', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	/* font-family: 'Array', sans-serif; */
+}
+
+body {
+	font-family: 'Satoshi';
 	@apply selection:bg-gray-400;
 }
 
@@ -37,6 +46,10 @@
 	.backdrop-blur-sm {
 		background-color: rgba(17, 24, 39, 0.8);
 	}
+}
+
+.array {
+	font-family: Array
 }
 
 .rise-wrapper {
@@ -80,29 +93,50 @@ scrollbar {
 }
 
 .wave {
-  animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
-  animation-duration: 2.5s;        /* Change to speed up or slow down */
-  animation-iteration-count: infinite;  /* Never stop waving :) */
-  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
-  animation-delay: 1s
-  /* display: inline-block; */
+	animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+	animation-duration: 2.5s; /* Change to speed up or slow down */
+	animation-iteration-count: infinite; /* Never stop waving :) */
+	transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+	animation-delay: 1s;
+	/* display: inline-block; */
 }
 
 @keyframes wave-animation {
-    0% { transform: rotate( 0.0deg) }
-   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
-   20% { transform: rotate(-8.0deg) }
-   30% { transform: rotate(14.0deg) }
-   40% { transform: rotate(-4.0deg) }
-   50% { transform: rotate(10.0deg) }
-   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
-  100% { transform: rotate( 0.0deg) }
+	0% {
+		transform: rotate(0deg);
+	}
+	10% {
+		transform: rotate(14deg);
+	} /* The following five values can be played with to make the waving more or less extreme */
+	20% {
+		transform: rotate(-8deg);
+	}
+	30% {
+		transform: rotate(14deg);
+	}
+	40% {
+		transform: rotate(-4deg);
+	}
+	50% {
+		transform: rotate(10deg);
+	}
+	60% {
+		transform: rotate(0deg);
+	} /* Reset for the last half to pause */
+	100% {
+		transform: rotate(0deg);
+	}
 }
 
-@font-face {
-    font-family: 'Array';
-    src: url('../static/array-bold-sub.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+/* @font-face {
+	font-family: 'Array';
+	src: url('../array-bold-sub.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+} */
 
+@font-face {
+	font-family: 'Satoshi';
+	src: url('../Satoshi-Variable.woff2') format('woff2-variations');
+	font-weight: 300 900;
 }

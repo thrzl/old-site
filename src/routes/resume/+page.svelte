@@ -4,9 +4,9 @@
 		#spotify, #presence {
 			display: none !important;
 		}
-
-		* {
-			font-family: "Poppins", sans-serif !important;
+		h1, h2, h3, h4, h5, h6 {
+			font-family: Satoshi, sans-serif !important;
+			font-weight: 800;
 		}
 	</style>
 </svelte:head>
@@ -15,7 +15,7 @@
 	import profilePic from "/static/logo192.webp"
 </script>
 
-<div class="bg-black text-white print:text-black">
+<div class="bg-black text-white print:text-black lowercase">
 	<h1 class="mx-auto my-12 text-3xl max-w-max font-bold">📄 my resume</h1>
 	<div
 		class="p-6 mx-auto page max-w-3xl print:max-w-letter md:max-w-letter md:h-letter xsm:p-8 sm:p-9 md:p-16 bg-neutral-800 rounded-xl my-2 rise-wrapper mb-0 rounded-b-none"
@@ -55,7 +55,7 @@
 						<header>
 							<h3 class="text-lg font-semibold">EY3 TECHNOLOGIES</h3>
 							<p class="leading-normal text-md text-gray-650">
-								September 2017 – Present | Web Developer, Office Engineer Ninja
+								September 2017 – Present | Research and Development
 							</p>
 						</header>
 						<p class="mt-2 text-md leading-normal">
