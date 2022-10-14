@@ -115,7 +115,7 @@
 					<section class="mb-4 break-inside-avoid">
 						<header>
 							<h3 class="text-lg font-semibold">
-								<a href="https://github.com/terabyte3/pinned" class="group">
+								<a href="https://github.com/thrzl/pinned" class="group">
 									pinned
 									<span
 										class="inline-block text-gray-550 print:text-black font-normal group-hover:-translate-y-[0.125rem] group-hover:translate-x-[0.125rem] transition duration-500 ease-in-out"
@@ -133,7 +133,7 @@
 					<section class="mb-4 break-inside-avoid">
 						<header>
 							<h3 class="text-lg font-semibold">
-								<a href="https://github.com/terabyte3/repltable" class="group">
+								<a href="https://github.com/thrzl/repltable" class="group">
 									repltable
 									<span
 										class="inline-block text-gray-550 print:text-black font-normal group-hover:-translate-y-[0.125rem] group-hover:translate-x-[0.125rem] transition duration-500 ease-in-out"
@@ -152,7 +152,7 @@
 				<section class="mb-4 break-inside-avoid">
 					<header>
 						<h3 class="text-lg font-semibold">
-							<a href="https://github.com/terabyte3/reqwest.py" class="group">
+							<a href="https://github.com/thrzl/reqwest.py" class="group">
 								reqwest.py
 								<span
 									class="inline-block text-gray-550 print:text-black font-normal group-hover:-translate-y-[0.125rem] group-hover:translate-x-[0.125rem] transition duration-500 ease-in-out"
@@ -252,8 +252,8 @@
 								</a>
 							</li>
 							<li class="mt-1.5 leading-normal text-md">
-								<a href="//github.com/terabyte3" class="group">
-									github.com/terabyte3
+								<a href="//github.com/thrzl" class="group">
+									github.com/thrzl
 									<span
 										class="inline-block text-gray-550 print:text-black font-normal transition duration-500 ease-in-out group-hover:-translate-y-[0.125rem] group-hover:translate-x-[0.125rem]"
 										>↗</span
