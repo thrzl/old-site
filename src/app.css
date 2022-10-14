@@ -137,6 +137,6 @@ scrollbar {
 
 @font-face {
 	font-family: 'Satoshi';
-	src: url('../Satoshi-Variable.woff2') format('woff2-variations');
+	src: url('/Satoshi-Variable.woff2') format('woff2-variations');
 	font-weight: 300 900;
 }
