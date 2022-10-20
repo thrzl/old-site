@@ -21,7 +21,7 @@
 			<div
 				class="z-20 absolute inset-2 md:inset-4 flex flex-col justify-center transition duration-300 scale-95 opacity-0 group-hover:scale-100 group-hover:opacity-100 lowercase items-center"
 			>
-				<p class="text-lg truncate leading-none md:leading-none mb-1 max-w-full">
+				<p class="text-lg truncate leading-tight md:leading-tight mb-1 max-w-full">
 					listening to <span class="font-bold">{music.song}</span>
 				</p>
 				<p class="text-sm md:text-base text-center leading-tight md:leading-tight opacity-80 mx-auto">
