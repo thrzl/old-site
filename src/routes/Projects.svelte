@@ -9,7 +9,7 @@
 </script>
 
 {#await projects}
-	<div class="mt-3 grid gap-4 grid-cols-1 w-full">
+	<div class="mt-3 grid gap-4 grid-cols-1 md:grid-cols-2 w-full">
 		{#each [...Array(6)] as _}
 			<div>
 				<div

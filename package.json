@@ -33,7 +33,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@fontsource/poppins": "^4.5.9",
 		"sk-lanyard": "^0.1.6"
 	}
 }
