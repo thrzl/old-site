@@ -4,12 +4,28 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 
 <url>
-  <loc>https://www.terabyteis.me/</loc>
-  <lastmod>2022-04-19T22:31:23+00:00</lastmod>
+  <loc>https://www.thrzl.xyz/</loc>
+  <lastmod>2022-10-21T17:06:08+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.thrzl.xyz/projects</loc>
+  <lastmod>2022-10-21T17:06:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.thrzl.xyz/music</loc>
+  <lastmod>2022-10-21T17:06:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.thrzl.xyz/resume</loc>
+  <lastmod>2022-10-21T17:06:08+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 
 
