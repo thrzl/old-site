@@ -12,7 +12,7 @@
 </svelte:head>
 
 <script>
-	import profilePic from "/static/logo192.webp"
+	import profilePic from "/static/resume.webp"
 </script>
 
 <div class="bg-black text-white print:text-black lowercase">
@@ -20,32 +20,23 @@
 	<div
 		class="p-6 mx-auto page max-w-3xl print:max-w-letter md:max-w-letter md:h-letter xsm:p-8 sm:p-9 md:p-16 bg-neutral-800 rounded-xl my-2 rise-wrapper mb-0 rounded-b-none"
 	>
-		<header class="flex items-center mb-8 md:mb-11 rise-wrapper">
-			<img
-				src={profilePic}
-				alt="Profile"
-				class="rounded-full w-8 h-8 md:w-16 md:h-16 rise-anim"
-				style="--delay: 200ms"
-			/>
-			<h1 class="text-2xl font-semibold pb-px ml-4 rise-anim" style="--delay: 400ms">terry</h1>
+		<header class="mb-8 md:mb-11 py-7 px-10 mx-auto bg-neutral-700 rounded-lg flex align-middle">
+			<div class="mr-5">
+				<img
+					src={profilePic}
+					alt="shot of me at niagara falls"
+					class="rounded-full w-16 h-16 md:w-24 md:h-24 mx-auto"
+					style="--delay: 200ms"
+				/>
+				<h1 class="text-4xl font-semibold pb-px text-center" style="--delay: 400ms">terry</h1>
+			</div>
+			<p class="mx-auto w-3/4 align-middle">hey, i'm terry, and i love tech! i first became interested in coding for game development, and quickly expanded from scratch to python, go, javascript, and rust. something i pride myself on is my ability to write performant, typed, and well-formatted python code.</p>
 		</header>
 
 		<div
 			class="md:col-count-2 print:col-count-2 col-gap-md md:h-letter-col print:h-letter-col col-fill-auto"
 		>
-			<section class="mt-8 first:mt-0">
-				<div class="break-inside-avoid">
-					<h2 class="mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal">
-						ABOUT ME
-					</h2>
-					<section class="mb-8 break-inside-avoid">
-						<p class="mt-2 text-md leading-normal">
-							Hey, I'm Terry, and I love tech! I first became interested in coding for game development, and quickly expanded from scratch to Python, Go, Javascript, and Rust. Something I pride myself on is my ability to write performant, typed, and well-formatted Python code.
-						</p>
-					</section>
-				</div>
-			</section>
-
+		
 			<section class="mt-8 first:mt-0">
 				<div class="break-inside-avoid">
 					<h2 class="mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal">
