@@ -1,4 +1,6 @@
 <script>
+	import Star from "./icons/StarIcon.svelte"
+	import Fork from "./icons/ShareIcon.svelte"
 	async function getProjects() {
 		const res = await fetch('/api/pinned_repos');
 		return await res.json();
@@ -23,7 +25,7 @@
 					<h4
 						class="invisible md:fixed inline font-bold w-max mr-3 text-sm md:bottom-3 md:right-5 md:clear-both"
 					>
-						⭐ 1337
+						<Star/> 1337
 					</h4>
 					<h5
 						class="invisible md:fixed inline font-bold w-max text-sm md:bottom-3 md:left-5 md:clear-both"
@@ -35,7 +37,7 @@
 		{/each}
 	</div>
 {:then data}
-	<div class="mt-3 grid gap-4 grid-cols-1 w-full">
+	<div class="mt-3 grid gap-4 grid-cols-1 md:grid-cols-2 w-full">
 		{#each data.repos as repo, i (repo.name)}
 			<div>
 				<a class="w-full h-full whitespace-nowrap md:text-left text-center" href={repo.link}>
@@ -52,7 +54,7 @@
 						<h4
 							class="text-white md:fixed inline font-bold w-max mr-3 text-sm md:bottom-3 md:right-5 md:clear-both"
 						>
-							⭐ {repo.stars}
+							<Star/> {repo.stars} | <Fork/> {repo.forks}
 						</h4>
 						<h5
 							class="md:fixed inline font-bold w-max text-sm md:bottom-3 md:left-5 md:clear-both lowercase"
