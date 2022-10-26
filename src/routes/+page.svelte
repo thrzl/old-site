@@ -60,6 +60,13 @@
 			>
 				resume
 			</a>
+			<a
+				href="/scrapbook"
+				class="text-gradient my-3 mx-3 md:mx-6 from-pink-300 to-purple-400 bg-gradient-to-br transition-all leading-tight rise-anim inline-flex border-gray-400 hover:border-neutral-600"
+				style={`--delay: ${(title.split(' ').length + 4) * 100 + 100}ms`}
+			>
+				scrapbook
+			</a>
 		</div>
 		<p class="text-base my-3 text-left font-extrabold w-1/2">
 			hey, i'm terry! i currently do research and development @ <a
