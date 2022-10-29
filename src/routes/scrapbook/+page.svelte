@@ -1,5 +1,5 @@
 <script>
-	import Scrapbook from '../Scrapbook.svelte';
+	import Scrapbook from '../../components/Scrapbook.svelte';
 	const title = ['📑 ', 's', 'c', 'r', 'a', 'p', 'b', 'o', 'o', 'k'];
 </script>
 

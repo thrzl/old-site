@@ -1,5 +1,5 @@
 <script>
-	import Projects from '../Projects.svelte';
+	import Projects from '../../components/Projects.svelte';
 	const title = ['🔨 ', 'p', 'r', 'o', 'j', 'e', 'c', 't', 's'];
 </script>
 

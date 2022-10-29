@@ -52,7 +52,8 @@
 						</h3>
 						<div class="md:mb-7 p-0 m-0" />
 						<h4
-							class="text-white md:fixed inline font-bold w-max mr-3 text-sm md:bottom-3 md:right-5 md:clear-both"
+							class="text-white md:fixed inline font-bold w-max mr-3 text-sm md:bottom-3 md:right-5 md:clear-both leading-tight
+							"
 						>
 							<Star/> {repo.stars} | <Fork/> {repo.forks}
 						</h4>

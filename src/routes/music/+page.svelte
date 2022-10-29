@@ -1,5 +1,5 @@
 <script>
-	import Music from '../Music.svelte';
+	import Music from '../../components/Music.svelte';
 </script>
 
 <div class="App bg-black">
