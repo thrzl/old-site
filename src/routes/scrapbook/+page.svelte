@@ -20,7 +20,7 @@
 				🏠 home
 			</a>
 		</div>
-		<div class="flex w-1/2 items-center" id="projects">
+		<div class="flex w-4/5 md:w-1/2 items-center" id="projects">
 			<Scrapbook />
 		</div>
 	</header>

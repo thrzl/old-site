@@ -41,7 +41,7 @@
 				<div
 					class="border-0 duration-500 scale-100 hover:scale-105 relative mx-auto rounded-lg shadow-none fontcalc h-full p-5 bg-neutral-800 my-3"
 				>
-					<h3 class="text-white md:block w-min md:w-full text-base wrap lowercase">
+					<h3 class="text-white md:block md:w-full text-base wrap lowercase">
 						{post.text}
 					</h3>
 					{#each post.attachments as image (image)}
