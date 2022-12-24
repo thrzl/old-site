@@ -4,7 +4,6 @@
     const act = useLanyard({method: "rest", id: "536644802595520534"})
     let music: Spotify | undefined
     $: music = $act?.spotify
-    console.log(music)
     function endsWithPunctuation(str: string) {
         return str.endsWith(".") || str.endsWith("!") || str.endsWith("?")
     }
