@@ -42,19 +42,19 @@
     {/each}
 </div>
 {:then posts}
-<div class="mt-5 grid gap-12 gap-y-2 grid-cols-1 w-3/4 md:w-full rise-wrapper">
-    {#each posts as post, _}
-        <div class="rise-anim">
+<div class="mt-5 grid gap-12 gap-y-2 grid-cols-1 w-3/4 md:w-full rise-wrapper rounded-lg">
+    {#each posts as post, i}
+        <div class="rise-anim rounded-lg" style={`--delay: ${i * 50 + 100}ms`}>
             <a class="w-full h-full whitespace-nowrap md:text-left decoration-none" href={post.path}>
                 <div
-                    class="border-0 flex-col md:flex-row flex duration-500 scale-100 hover:scale-105 rounded-lg shadow-none fontcalc h-fit w-full p-5 bg-neutral-800 v-middle bg-op-50 hover:scale-[1.03] group-hover:blur-sm"
+                    class="border-0 flex-col md:flex-row flex scale-100 rounded-lg shadow-none fontcalc h-fit w-full p-5 bg-neutral-800 v-middle group"
                 >
-                    <img src="{post.meta.image}" class="-z-20 overflow-clip w-32 h-32 m-0 object-cover rounded-lg mr-5" alt="{post.meta.title}"/>
-                    <div class="my-auto">
+                    <img src="{post.meta.image}" class="-z-20 -mt-5 -ml-5 absolute w-full h-full duration-500 overflow-clip w-32 h-32 m-0 object-cover rounded-lg mr-5 group-hover:scale-[1.05] brightness-70 transition-all" alt="{post.meta.title}"/>
+                    <div class="my-auto max-w-5/6">
                         <h2 class="text-white text-left font-bold text-3xl inline md:w-full block truncate lowercase leading-none my-3">
                             {post.meta.title}
                         </h2>
-                        <h3 class="text-white text-lg block md:w-full text-base truncate lowercase leading-none my-3 max-w-full">
+                        <h3 class="text-white text-lg block w-full text-base truncate lowercase leading-none my-3 max-w-full">
                             {post.meta.abstract}
                         </h3>
                     </div>
@@ -62,6 +62,22 @@
             </a>
         </div>
     {/each}
+    <div class="rise-anim rounded-lg" style={`--delay: ${(posts.length+1) * 50 + 100}ms`}>
+        <div class="w-full h-full whitespace-nowrap md:text-left decoration-none brightness-50">
+            <div
+                class="border-0 flex-col md:flex-row flex scale-100 rounded-lg shadow-none fontcalc h-fit w-full p-5 bg-neutral-800 v-middle group"
+            >
+                <div class="my-auto max-w-5/6">
+                    <h2 class="text-white text-left font-bold text-3xl inline md:w-full block truncate lowercase leading-none my-3">
+                        more coming soon!
+                    </h2>
+                    <h3 class="text-white text-lg block w-full text-base truncate lowercase leading-none my-3 max-w-full">
+                        check back soon to see what i'll write about next :)
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 {/await}
 </header>
