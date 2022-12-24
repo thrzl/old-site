@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>my resume</title>
+	<title>terry</title>
 	<style>
 		#spotify,
 		#presence {

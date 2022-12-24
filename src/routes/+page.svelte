@@ -2,7 +2,7 @@
 import SpotifyBlurb from "../components/SpotifyBlurb.svelte";
 
 	// import profilePic from '/logo192.webp';
-	const title = "👋🏽  i'm thrizzle.";
+	const title = "👋🏽  i'm terry.";
 </script>
 
 <div class="text-center bg-black text-white ">
@@ -10,12 +10,12 @@ import SpotifyBlurb from "../components/SpotifyBlurb.svelte";
 		<img
 			width="160px"
 			height="160px"
-			src="/logo192.webp"
+			src="/profile.webp"
 			class="rounded-full relative"
 			alt="profile"
 		/>
 			<h1
-				class="headertext mt-2 font-900 text-7xl sm:tagline m-0 rise-wrapper whitespace-pre text-left w-fit"
+				class="headertext mt-2 font-900 pb-2 text-7xl sm:tagline m-0 rise-wrapper whitespace-pre text-left w-fit"
 			>
 				{#each title.split(' ') as word, index}
 					{#if index === 0}
@@ -34,16 +34,9 @@ import SpotifyBlurb from "../components/SpotifyBlurb.svelte";
 			<div
 				class="links inline mx-auto text-base h-min-content rise-wrapper font-extrabold transition-all duration-500 ease-in-out"
 			>
-				<!-- <a
-					href="https://blog.thrzl.xyz"
-					class=" my-3 mx-3 md:mx-6 transition-all leading-tight scale-110 rise-anim inline-flex border-blue-400 hover:border-blue-600"
-					style={`--delay: ${(title.split(' ').length + 1) * 100 + 100}ms`}
-				>
-					blog
-				</a> -->
 				<a
 					href="/projects"
-					class=" my-3 mx-3 text-blue md:mx-6 transition-all leading-tight rise-anim inline-flex"
+					class=" my-3 mx-3 text-purple md:mx-6 transition-all leading-tight rise-anim inline-flex"
 					style={`--delay: ${(title.split(' ').length + 2) * 100 + 100}ms`}
 				>
 					projects
@@ -57,7 +50,7 @@ import SpotifyBlurb from "../components/SpotifyBlurb.svelte";
 				</a>
 				<a
 					href="/music"
-					class=" my-3 mx-3 text-green md:mx-6 transition-all leading-tight rise-anim inline-flex"
+					class=" my-3 mx-3 text-green-300 md:mx-6 transition-all leading-tight rise-anim inline-flex"
 					style={`--delay: ${(title.split(' ').length + 3) * 100 + 100}ms`}
 				>
 					music
@@ -71,7 +64,7 @@ import SpotifyBlurb from "../components/SpotifyBlurb.svelte";
 				</a>
 				<a
 					href="/scrapbook"
-					class=" my-3 mx-3 md:mx-6 text-yellow transition-all leading-tight rise-anim inline-flex"
+					class=" my-3 mx-3 md:mx-6 text-purple-200 transition-all leading-tight rise-anim inline-flex"
 					style={`--delay: ${(title.split(' ').length + 4) * 100 + 100}ms`}
 				>
 					scrapbook
