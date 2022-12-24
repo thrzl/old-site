@@ -1,0 +1,21 @@
+---
+title: how i built this blog
+date: "2021-12-24"
+image: /images/how-i-built-hero.webp
+abstract: "this blog took a lil effort, but this is the first post and how i finally figured it out"
+---
+
+# the vision
+in the tks program, all members are supposed to have a newsletter or blog that they can document their learning in. i'm... a bit behind to say the least, but with christmas break starting (i know, mine is a little late), i decided to finally get around to making my blog!
+
+## astro
+my initial goal was to use [astro](https://astro.build), a relatively new web framework that's known for its speed and its ability to let you focus on content. it has features like markdown routing, and a built-in markdown parser. i was really excited to use it, but i ran into a few problems.
+
+### dynamic data fetching
+astro absolutely can't update data in js. maybe i just did it wrong, but it was very difficult to even get static data, even when using ui integrations (like svelte for me) to have dynamic/updating data fetching. i was eventually reduced to just having to use `fetch`, but even then, the data often wasn't returned. eventually, reading through the docs again, i realized that i should try something else. astro is built for ssg specifically (without dynamic data!), and many features of this site like the [music](/music) and [projects](/projects) pages are dynamic. i didn't want to lose that functionality, so i decided to move on.
+
+## markdown routing
+i was *really* hoping i wouldn't have to write my own markdown parser, and thankfully i didn't. i stumbled across [pwngwn's mdsvex project](https://github.com/pngwn/mdsvex), which allows me to use markdown files as routes in svelte through preprocessing. however, sveltekit's new routing method would make it very annoying to create new blog posts (i dont want to have to make a whole new folder for a single post), but i found out that i could use a dynamic route and manually load the data into the page and therefore put the files wherever i wanted. this was a huge relief, and i was able to get it working.
+
+## unocss
+these 3 steps don't seem too difficult on their own, and that's because they weren't. my real issue is that for some reason, my square brain decided to toss in [anthony fu's unocss](https://uno.antfu.me), which is an atomic css ~~framework~~ engine that aims to be highly customizable and fast. it solves a lot of the issues that tailwind and windicss have (speed and customizability), but at the cost, i learned, of parity, even with the tailwindcss preset enabled. after switching from tailwind to uno, i found that my entire homepage was misaligned and spaced weirdly. fixing that on its own took around an hour, but i also had to fix all of the other pages. the main issues i ran into are that headings have margins that are automatically added, and that spacing is very different from tailwind (e.g. tailwind's p-4 and uno's p-4 mean different things). all in all, however, i'm very happy with unocss aside from the effort it took me to implement it. it's blazingly fast (sorry, i had to) and the generation of rules is great.

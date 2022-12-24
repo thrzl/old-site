@@ -1,16 +1,22 @@
 <script>
 	import '../app.css';
-	// import '@fontsource/poppins/400.css';
-	// import '@fontsource/poppins/700.css';
-	import Widgets from '../components/Widgets.svelte';
-	import { onMount } from 'svelte';
-	let onResume = false // (window && !window.location.pathname.includes("/resume"))
-	onMount(() => {
-		onResume = !window.location.pathname.includes("/resume")
-	})
+	import 'uno.css';
+	import PageTransition from '../components/PageTransition.svelte';
+	import { page } from '$app/stores';
+	$: refresh = page;
+	console.log(refresh)
+	// onMount(() => {
+	// 	 refresh = window.location.pathname;
+	// });
+	console.log($page)
+
 </script>
 
-<slot />
-{#if onResume}
-	<Widgets />
-{/if}
+<svelte:head>
+	<title>~{$page.url.pathname}</title>
+</svelte:head>
+{#key $page}
+<PageTransition>
+	<slot />
+</PageTransition>
+{/key}

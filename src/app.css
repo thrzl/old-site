@@ -1,18 +1,12 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer utilities {
-	.text-gradient {
-		background-clip: text;
-		-webkit-text-fill-color: transparent;
-	}
-	.tagline {
-		font-size: calc(50px + 2vmin);
-	}
-	.headertext {
-		line-height: calc(1em + 2vmin);
-	}
+.text-gradient {
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.tagline {
+	font-size: calc(50px + 2vmin);
+}
+.headertext {
+	line-height: calc(1em + 2vmin);
 }
 
 h1,
@@ -37,10 +31,6 @@ body {
 	font-size: calc(5px + 2vmin);
 }
 
-.App-header {
-	@apply mx-auto min-h-screen flex flex-col items-center justify-center text-white lg:max-w-screen-xl w-screen;
-	/*font-size: calc(10px + 2vmin);*/
-}
 
 @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
 	.backdrop-blur-sm {
@@ -80,8 +70,41 @@ body {
 	animation-fill-mode: forwards;
 }
 
+.slide-wrapper {
+	overflow: hidden;
+	position: relative;
+}
+
+@keyframes slide {
+	0% {
+		transform: translate3d(150%, 0, 0);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translate3d(0, 0, 0);
+		opacity: 1;
+	}
+}
+
+.slide-anim {
+	/*white-space: pre;*/
+	transform: translate3d(150%, 0, 0);
+	opacity: 0;
+	animation-name: slide;
+	animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	animation-duration: 1000ms;
+	animation-delay: var(--delay);
+	animation-fill-mode: forwards;
+}
+
 a {
 	@apply transition-all duration-500 border-b-2 p-0 border-gray-500 hover:border-white;
+}
+
+.prose a {
+	--un-text-opacity: 1;
+  	color: rgba(255, 255, 255, var(--un-text-opacity));
 }
 
 ::-webkit-scrollbar {

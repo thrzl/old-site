@@ -1,93 +1,93 @@
 <script>
-	import profilePic from '../../static/logo192.webp';
+import SpotifyBlurb from "../components/SpotifyBlurb.svelte";
+
+	// import profilePic from '/logo192.webp';
 	const title = "👋🏽  i'm thrizzle.";
 </script>
 
-<div class="App bg-black text-white">
-	<header class="App-header m-auto">
+<div class="text-center bg-black text-white ">
+	<header class="mx-auto min-h-screen flex flex-col items-center justify-center text-white lg:max-w-screen-xl w-screen m-auto">
 		<img
 			width="160px"
 			height="160px"
-			src={profilePic}
+			src="/logo192.webp"
 			class="rounded-full relative"
 			alt="profile"
 		/>
-		<h1
-			class="headertext mt-2 font-[900] text-5xl sm:tagline m-0 rise-wrapper whitespace-pre text-left"
-		>
-			{#each title.split(' ') as word, index}
-				{#if index === 0}
-					<span class="rise-anim md:inline-flex block" style={`--delay: ${index * 100 + 100}ms`}
-						><span class="wave m-2">{`${word}`} </span>{index !== title.split(' ').length - 1
-							? ' '
-							: ''}</span
-					>
-				{:else if index !== 1}
-					<span class="rise-anim md:inline-flex block " style={`--delay: ${index * 100 + 100}ms`}
-						>{`${word}`}{index !== title.split(' ').length - 1 ? ' ' : ''}</span
-					>
-				{/if}
-			{/each}
-		</h1>
-		<div
-			class="links flex text-base align-middle h-min-content rise-wrapper font-extrabold transition-all duration-500 ease-in-out"
-		>
-			<!-- <a
-				href="https://blog.thrzl.xyz"
-				class="text-gradient my-3 mx-3 md:mx-6 from-blue-600 to-blue-400 bg-gradient-to-br transition-all leading-tight scale-110 rise-anim inline-flex border-blue-400 hover:border-blue-600"
-				style={`--delay: ${(title.split(' ').length + 1) * 100 + 100}ms`}
+			<h1
+				class="headertext mt-2 font-900 text-7xl sm:tagline m-0 rise-wrapper whitespace-pre text-left w-fit"
 			>
-				blog
-			</a> -->
-			<a
-				href="/projects"
-				class="text-gradient my-3 mx-3 md:mx-6 from-purple-600 to-indigo-400 bg-gradient-to-br transition-all leading-tight rise-anim inline-flex border-indigo-400 hover:border-purple-600"
-				style={`--delay: ${(title.split(' ').length + 2) * 100 + 100}ms`}
+				{#each title.split(' ') as word, index}
+					{#if index === 0}
+						<span class="rise-anim md:inline-flex block" style={`--delay: ${index * 100 + 100}ms`}
+							><span class="wave m-2">{`${word}`} </span>{index !== title.split(' ').length - 1
+								? ' '
+								: ''}</span
+						>
+					{:else if index !== 1}
+						<span class="rise-anim md:inline-flex block " style={`--delay: ${index * 100 + 100}ms`}
+							>{`${word}`}{index !== title.split(' ').length - 1 ? ' ' : ''}</span
+						>
+					{/if}
+				{/each}
+			</h1>
+			<div
+				class="links inline mx-auto text-base h-min-content rise-wrapper font-extrabold transition-all duration-500 ease-in-out"
 			>
-				projects
-			</a>
-			<a
-				href="/music"
-				class="text-gradient my-3 mx-3 md:mx-6 from-orange-600 to-orange-400 bg-gradient-to-br transition-all leading-tight rise-anim inline-flex border-orange-400 hover:border-orange-600"
-				style={`--delay: ${(title.split(' ').length + 3) * 100 + 100}ms`}
-			>
-				music
-			</a>
-			<a
-				href="/resume"
-				class="text-gradient my-3 mx-3 md:mx-6 from-gray-300 to-white bg-gradient-to-br transition-all leading-tight rise-anim inline-flex border-gray-400 hover:border-neutral-600"
-				style={`--delay: ${(title.split(' ').length + 4) * 100 + 100}ms`}
-			>
-				resume
-			</a>
-			<a
-				href="/scrapbook"
-				class="text-gradient my-3 mx-3 md:mx-6 from-pink-300 to-purple-400 bg-gradient-to-br transition-all leading-tight rise-anim inline-flex border-gray-400 hover:border-neutral-600"
-				style={`--delay: ${(title.split(' ').length + 4) * 100 + 100}ms`}
-			>
-				scrapbook
-			</a>
-		</div>
-		<p class="text-base my-3 text-left font-extrabold w-1/2">
-			hey, i'm terry! i currently do research and development @ <a
-				href="https://ey3tech.vercel.app/"
-				class="group border-blue-400 text-blue-400 hover:border-blue-700"
-				>ey3 technologies <span
-					class="inline-block text-gray-550 print:text-black font-normal group-hover:-translate-y-[0.125rem] group-hover:translate-x-[0.125rem] transition duration-500 ease-in-out"
-					>↗</span
-				></a
-			>. i can create amazing frontend experiences, and speedy backend resources. i use rust,
-			python, svelte, javascript, and more! check out 🔨
-			<a
-				href="/projects"
-				class="text-gradient bg-gradient-to-br underline from-purple-600 to-indigo-400 border-indigo-400 hover:border-purple-600"
-				>some of my projects</a
-			>, or 🎵
-			<a
-				href="/music"
-				class="text-gradient bg-gradient-to-br underline from-orange-600 to-orange-400 border-orange-400 hover:border-orange-600"
-				>see what i've been listening to</a
-			>.
-		</p>
+				<!-- <a
+					href="https://blog.thrzl.xyz"
+					class=" my-3 mx-3 md:mx-6 transition-all leading-tight scale-110 rise-anim inline-flex border-blue-400 hover:border-blue-600"
+					style={`--delay: ${(title.split(' ').length + 1) * 100 + 100}ms`}
+				>
+					blog
+				</a> -->
+				<a
+					href="/projects"
+					class=" my-3 mx-3 text-blue md:mx-6 transition-all leading-tight rise-anim inline-flex"
+					style={`--delay: ${(title.split(' ').length + 2) * 100 + 100}ms`}
+				>
+					projects
+				</a>
+				<a
+					href="/blog"
+					class=" my-3 mx-3 text-stone md:mx-6 transition-all leading-tight rise-anim inline-flex"
+					style={`--delay: ${(title.split(' ').length + 2) * 100 + 100}ms`}
+				>
+					blog
+				</a>
+				<a
+					href="/music"
+					class=" my-3 mx-3 text-green md:mx-6 transition-all leading-tight rise-anim inline-flex"
+					style={`--delay: ${(title.split(' ').length + 3) * 100 + 100}ms`}
+				>
+					music
+				</a>
+				<a
+					href="/resume"
+					class=" my-3 mx-3 md:mx-6 text-white transition-all leading-tight rise-anim inline-flex"
+					style={`--delay: ${(title.split(' ').length + 4) * 100 + 100}ms`}
+				>
+					resume
+				</a>
+				<a
+					href="/scrapbook"
+					class=" my-3 mx-3 md:mx-6 text-yellow transition-all leading-tight rise-anim inline-flex"
+					style={`--delay: ${(title.split(' ').length + 4) * 100 + 100}ms`}
+				>
+					scrapbook
+				</a>
+			</div>
+			<p class="text-base my-3 text-left font-extrabold w-1/2">
+				hey, i'm terry! i currently do research and development @ <a
+					href="https://ey3tech.vercel.app/"
+					class="group text-blue"
+					>ey3 technologies <span
+						class="inline-block font-normal group-hover:-translate-y-[0.125rem] group-hover:translate-x-[0.125rem] transition duration-500 ease-out"
+						>↗</span
+					></a
+				>. i can create amazing frontend experiences, and speedy backend resources. i use rust,
+				python, svelte, javascript, and more! <SpotifyBlurb/>
+				
+			</p>
 	</header>
 </div>

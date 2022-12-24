@@ -9,60 +9,69 @@
 </script>
 
 {#await projects}
-	<div class="mt-3 grid gap-4 grid-cols-1 md:grid-cols-2 w-full">
-		{#each [...Array(6)] as _}
+	<div class="mt-5 grid gap-12 gap-y-2 grid-cols-1 md:grid-cols-2 w-full">
+		{#each [...Array(6)] as _, i}
 			<div>
-				<div
-					class={`border-0 -translate-y-0 hover:-translate-y-2 relative rounded-lg shadow-none fontcalc h-full w-full p-5 animate-pulse bg-neutral-900 duration-1000`}
-				>
-					<h2 class="invisible font-bold inline w-min md:w-full md:block truncate">
-						a litte something
-					</h2>
-					<h3 class="invisible hidden md:block w-min md:w-full text-base truncate">
-						just to reserve
-					</h3>
-					<div class="invisible md:mb-7 p-0 m-0" />
-					<h4
-						class="invisible md:fixed inline font-bold w-max mr-3 text-sm md:bottom-3 md:right-5 md:clear-both"
+				<a class="w-full h-full whitespace-nowrap md:text-left decoration-none" href="#">
+					<div
+						class="border-0 duration-500 scale-100 hover:scale-105 relative rounded-lg shadow-none fontcalc h-fit w-full p-5 bg-neutral-800 v-middle"
 					>
-						<Star/> 1337
-					</h4>
-					<h5
-						class="invisible md:fixed inline font-bold w-max text-sm md:bottom-3 md:left-5 md:clear-both"
-					>
-						some space
-					</h5>
-				</div>
+						<div class="my-auto">
+							<h2 class="text-white invisible font-bold text-3xl inline w-min md:w-full md:block truncate lowercase leading-none my-3">
+								repo name
+							</h2>
+							<h3 class="text-white invisible hidden text-lg md:block w-min md:w-full text-base truncate lowercase leading-none my-3">
+								repo description
+							</h3>
+							<div class="flex justify-between">
+								<h5
+								class="font-bold invisible w-max text-sm md:bottom-3 md:left-5 md:clear-both lowercase leading-tight my-0"
+								>
+								some language
+								</h5>
+								<h4
+								class="text-white font-bold w-max mr-3 text-sm md:bottom-1 md:right-5 md:clear-both leading-none my-0
+								"
+							>
+								<Star/> 50 | <Fork/> 50
+							</h4>
+							</div>
+						</div>
+					</div>
+				</a>
 			</div>
 		{/each}
 	</div>
 {:then data}
-	<div class="mt-3 grid gap-4 grid-cols-1 md:grid-cols-2 w-full">
+	<div class="mt-5 grid gap-12 gap-y-2 grid-cols-1 md:grid-cols-2 w-full">
 		{#each data.repos as repo, i (repo.name)}
 			<div>
-				<a class="w-full h-full whitespace-nowrap md:text-left text-center" href={repo.link}>
+				<a class="w-full h-full whitespace-nowrap md:text-left decoration-none" href={repo.link}>
 					<div
-						class="border-0 duration-500 scale-100 hover:scale-105 relative rounded-lg shadow-none fontcalc h-full w-full p-5 bg-neutral-800"
+						class="border-0 duration-500 scale-100 hover:scale-105 relative rounded-lg shadow-none fontcalc h-fit w-full p-5 bg-neutral-800 v-middle"
 					>
-						<h2 class="text-white font-bold inline w-min md:w-full md:block truncate lowercase">
-							{repo.name}
-						</h2>
-						<h3 class="text-white hidden md:block w-min md:w-full text-base truncate lowercase">
-							{repo.description}
-						</h3>
-						<div class="md:mb-7 p-0 m-0" />
-						<h4
-							class="text-white md:fixed inline font-bold w-max mr-3 text-sm md:bottom-3 md:right-5 md:clear-both leading-tight
-							"
-						>
-							<Star/> {repo.stars} | <Fork/> {repo.forks}
-						</h4>
-						<h5
-							class="md:fixed inline font-bold w-max text-sm md:bottom-3 md:left-5 md:clear-both lowercase"
-							style={`color: ${repo.language_color}`}
-						>
-							{repo.language}
-						</h5>
+						<div class="my-auto">
+							<h2 class="text-white font-bold text-3xl inline w-min md:w-full md:block truncate lowercase leading-none my-3">
+								{repo.name}
+							</h2>
+							<h3 class="text-white hidden text-lg md:block w-min md:w-full text-base truncate lowercase leading-none my-3">
+								{repo.description}
+							</h3>
+							<div class="flex justify-between">
+								<h5
+								class="font-bold w-max text-sm md:bottom-3 md:left-5 md:clear-both lowercase leading-tight my-0"
+								style={`color: ${repo.language_color}`}
+								>
+								{repo.language}
+								</h5>
+								<h4
+								class="text-white font-bold w-max mr-3 text-sm md:bottom-1 md:right-5 md:clear-both leading-none my-0
+								"
+							>
+								<Star/> {repo.stars} | <Fork/> {repo.forks}
+							</h4>
+							</div>
+						</div>
 					</div>
 				</a>
 			</div>

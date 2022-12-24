@@ -4,7 +4,9 @@
 </script>
 
 <div class="App bg-black">
-	<header class="App-header m-auto">
+	<header
+		class="mx-auto min-h-screen flex flex-col items-center justify-center text-white lg:max-w-screen-xl w-screen m-auto"
+	>
 		<h1 class="headertext mt-2 font-bold text-5xl sm:tagline m-0 rise-wrapper whitespace-pre">
 			{#each title as letter, index}
 				<span class="rise-anim inline-flex" style={`--delay: ${index * 50 + 100}ms`}

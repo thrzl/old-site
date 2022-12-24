@@ -35,24 +35,22 @@
 		{/each}
 	</div>
 {:then posts}
-	<div class="mt-3 w-full mx-auto">
+	<div class="mt-3 w-full mx-auto rise-wrapper">
 		{#each posts as post, i (post.id)}
-			<div>
+			<div class="rise-anim">
 				<div
 					class="border-0 duration-500 scale-100 hover:scale-105 relative mx-auto rounded-lg shadow-none fontcalc h-full p-5 bg-neutral-800 my-3"
 				>
 					<h3 class="text-white md:block md:w-full text-base wrap lowercase">
 						{post.text}
 					</h3>
-					{#each post.attachments as image (image)}
-						{#if image.endsWith("mp4")}
-							<video class="w-9/10 rounded-sm my-3" autoplay loop muted>
-								<source src={image} type="video/mp4" />
-							</video>
-						{:else}
-							<img src={image} class="w-9/10 rounded-sm my-3 mx-auto" alt="what i worked on" />
-						{/if}
-					{/each}
+					{#if post.attachments[0].endsWith("mp4")}
+						<video class="w-9/10 rounded-sm my-3" autoplay loop muted>
+							<source src={post.attachments[0]} type="video/mp4" />
+						</video>
+					{:else}
+						<img src={post.attachments[0]} class="w-9/10 rounded-sm my-3 mx-auto" alt="what i worked on" />
+					{/if}
 					<h4
 						class="text-white font-bold text-sm lowercase
 							"
