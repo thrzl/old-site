@@ -16,12 +16,10 @@
 		"@sveltejs/kit": "1.0.0-next.589",
 		"@typescript-eslint/eslint-plugin": "^5.47.0",
 		"@typescript-eslint/parser": "^5.47.0",
-		"autoprefixer": "^10.4.13",
 		"eslint": "^8.30.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte3": "^4.0.0",
 		"mdsvex": "^0.10.6",
-		"postcss": "^8.4.20",
 		"prettier": "^2.8.1",
 		"prettier-plugin-svelte": "^2.9.0",
 		"svelte": "^3.55.0",
@@ -34,7 +32,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"sk-lanyard": "^0.1.7",
-		"swup": "^2.0.19"
+		"sk-lanyard": "^0.1.7"
 	}
 }
