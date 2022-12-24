@@ -19,7 +19,7 @@ h6 {
 }
 
 body {
-	font-family: 'Satoshi';
+	font-family: 'Satoshi', sans-serif;
 	@apply selection:bg-gray-400;
 }
 
@@ -36,10 +36,6 @@ body {
 	.backdrop-blur-sm {
 		background-color: rgba(17, 24, 39, 0.8);
 	}
-}
-
-.array {
-	font-family: Array
 }
 
 .rise-wrapper {
