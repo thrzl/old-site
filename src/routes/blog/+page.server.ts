@@ -1,7 +1,7 @@
-import { json } from "@sveltejs/kit";
+export const prerender = true;
 
-/** @type {import('./$types').RequestHandler} */
-export async function GET() {
+/** @type {import('./$types').PageServerLoad} */
+export async function load() {
     const allPostFiles = import.meta.glob('/src/routes/blog/*.md')
     const iterablePostFiles = Object.entries(allPostFiles)
 
@@ -20,7 +20,5 @@ export async function GET() {
         return new Date(b.meta.date) - new Date(a.meta.date)
     })
 
-    return json(
-        sortedPosts
-    );
+    return {posts: sortedPosts};
 }

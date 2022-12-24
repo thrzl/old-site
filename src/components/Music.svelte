@@ -1,12 +1,9 @@
 <script lang="ts">
-	async function getMusic() {
-		const res = await fetch('/api/music');
-		return await res.json();
-	}
-	const lastfm = getMusic();
+	export let lastfm;
+	console.log(lastfm.topArtist.toString().slice(0, 100))
 </script>
 
-{#await lastfm}
+{#if !lastfm}
 	<div class="w-3/4 mx-auto">
 		<p class="text-base lowercase">
 			i've been listening to <span class="animate-pulse bg-[#141414] -p-1 rounded-full">
@@ -52,8 +49,7 @@
 			</div>
 		</div>
 	</div>
-	
-{:then lastfm}
+{:else}
 	<div class="w-3/4 mx-auto">
 		<p class="text-base lowercase">
 			i've been listening to <a class="font-bold text-red" href={lastfm.topArtist.url}
@@ -103,4 +99,4 @@
 			</div>
 		</div>
 	</div>
-{/await}
+{/if}

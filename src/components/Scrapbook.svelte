@@ -1,12 +1,9 @@
 <script>
-	async function getPosts() {
-		const res = await fetch('/api/scrapbook');
-		return await res.json();
-	}
-	const data = getPosts();
+	export let postsRaw;
+	let posts = postsRaw.posts
 </script>
 
-{#await data}
+{#if !posts}
 	<div class="mt-3 grid gap-4 grid-cols-1 md:grid-cols-2 w-full">
 		{#each [...Array(6)] as _}
 			<div>
@@ -34,7 +31,7 @@
 			</div>
 		{/each}
 	</div>
-{:then posts}
+{:else}
 	<div class="mt-3 w-full mx-auto rise-wrapper">
 		{#each posts as post, i (post.id)}
 			<div class="rise-anim">
@@ -61,4 +58,4 @@
 			</div>
 		{/each}
 	</div>
-{/await}
+{/if}

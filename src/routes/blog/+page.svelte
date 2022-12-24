@@ -1,9 +1,6 @@
 <script>
-    async function getPosts() {
-		const res = await fetch('/api/posts');
-		return await res.json();
-	}
-    let posts = getPosts();
+    export let data;
+    let posts = data.posts;
 </script>
 
 <div class="App bg-black text-white">

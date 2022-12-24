@@ -1,4 +1,5 @@
 <script>
+	export let data;
 	import Music from '../../components/Music.svelte';
 </script>
 
@@ -16,6 +17,6 @@
 				🏠 home
 			</a>
 		</div>
-		<Music />
+		<Music lastfm={data}/>
 	</header>
 </div>

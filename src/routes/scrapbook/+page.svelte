@@ -1,6 +1,7 @@
 <script>
 	import Scrapbook from '../../components/Scrapbook.svelte';
 	const title = ['📑 ', 's', 'c', 'r', 'a', 'p', 'b', 'o', 'o', 'k'];
+	export let data;
 </script>
 
 <div class="App bg-black">
@@ -23,7 +24,7 @@
 			</a>
 		</div>
 		<div class="flex w-4/5 md:w-1/2 items-center" id="projects">
-			<Scrapbook />
+			<Scrapbook postsRaw={data}/>
 		</div>
 	</header>
 </div>

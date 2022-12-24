@@ -1,6 +1,7 @@
 <script>
 	import Projects from '../../components/Projects.svelte';
 	const title = ['🔨 ', 'p', 'r', 'o', 'j', 'e', 'c', 't', 's'];
+	export let data;
 </script>
 
 <div class="App bg-black">
@@ -23,7 +24,7 @@
 			</a>
 		</div>
 		<div class="flex w-1/2 items-center" id="projects">
-			<Projects />
+			<Projects projects={data}/>
 		</div>
 	</header>
 </div>

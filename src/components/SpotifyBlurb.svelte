@@ -7,9 +7,9 @@
     function endsWithPunctuation(str: string) {
         return str.endsWith(".") || str.endsWith("!") || str.endsWith("?")
     }
+    let musicBlurb = `${`on ${music?.album} ` ? music?.song !== music?.album : " "} by ${music?.artist}`
 </script>
 
 {#if music}
-<span class="lowercase">listening to <a class="text-green" href={`https://open.spotify.com/track/${music.track_id}`}>{music.song}</a> by {music.artist}
-    {#if music.song !== music.album} on {music.album}{/if}{#if !endsWithPunctuation(music.album)}.{/if}</span>
+<span class="lowercase">listening to <a class="text-green" href={`https://open.spotify.com/track/${music.track_id}`}>{music.song}</a> by {music.artist}{#if music.song !== music.album} on {music.album}{/if}{#if !endsWithPunctuation(music.album)}.{/if}</span>
 {/if}

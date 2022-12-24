@@ -1,11 +1,7 @@
 <script>
 	import Star from "./icons/StarIcon.svelte"
 	import Fork from "./icons/ShareIcon.svelte"
-	async function getProjects() {
-		const res = await fetch('/api/pinned_repos');
-		return await res.json();
-	}
-	const projects = getProjects();
+	export let projects
 </script>
 
 {#await projects}
