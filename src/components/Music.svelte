@@ -26,10 +26,7 @@
 				class="lg:px-[calc(50vw-400px)] md:px-[calc(50vw-350px)] px-8 lg:scroll-pl-[calc(50vw-400px)] md:scroll-pl-[calc(50vw-350px)] scroll-pl-8 grid grid-rows-2 grid-cols-[repeat(24,calc(9rem))] md:grid-cols-[repeat(24,calc(12rem))] lg:grid-cols-[repeat(24,calc(14rem))] grid-flow-col gap-4 gap-x-12 overflow-x-scroll no-scrollbar snap-x snap-mandatory"
 			>
 				{#each [...Array(48)] as _, i}
-					<a
-						href="#"
-						target="_blank"
-						rel="noopener noreferrer"
+					<div
 						class="border-0 group relative mx-8 snap-start snap-always rounded-lg before:absolute max-h-min before:inset-0 before:z-10 before:bg-black before:opacity-0 before:transition before:duration-300 hover:before:opacity-50 max-h-[300px] w-64 h-64"
 						style={`--delay: ${i * 100 + 200}ms`}
 					>
@@ -50,7 +47,7 @@
 								mmusic data
 							</p>
 						</div>
-					</a>
+					</div>
 				{/each}
 			</div>
 		</div>

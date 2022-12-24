@@ -12,7 +12,7 @@
 	<div class="mt-5 grid gap-12 gap-y-2 grid-cols-1 md:grid-cols-2 w-full">
 		{#each [...Array(6)] as _, i}
 			<div>
-				<a class="w-full h-full whitespace-nowrap md:text-left decoration-none" href="#">
+				<div class="w-full h-full whitespace-nowrap md:text-left decoration-none">
 					<div
 						class="border-0 duration-500 scale-100 hover:scale-105 relative rounded-lg shadow-none fontcalc h-fit w-full p-5 bg-neutral-800 v-middle"
 					>
@@ -38,7 +38,7 @@
 							</div>
 						</div>
 					</div>
-				</a>
+				</div>
 			</div>
 		{/each}
 	</div>
