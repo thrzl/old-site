@@ -23,7 +23,7 @@
 				🏠 home
 			</a>
 		</div>
-		<div class="flex w-1/2 items-center" id="projects">
+		<div class="flex max-w-3/4 items-center" id="projects">
 			<Projects projects={data}/>
 		</div>
 	</header>
