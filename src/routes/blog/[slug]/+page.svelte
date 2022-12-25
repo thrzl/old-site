@@ -1,5 +1,6 @@
 <script>
   export let data;
+  import "../prisma.css"
 </script>
 
 <div style="background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), linear-gradient(180deg, rgba(2,0,36,0) 0%, rgba(0,0,0,1) 100%), url({data.image}); background-position: center" class="bg-no-repeat bg-cover h-180 absolute w-screen -ml-2 -mt-2 -z-20"></div>

@@ -48,10 +48,10 @@
                 >
                     <img src="{post.meta.image}" class="-z-20 -mt-5 -ml-5 absolute w-full h-full duration-500 overflow-clip object-cover rounded-lg mr-5 group-hover:scale-[1.05] brightness-70 transition-all" alt="{post.meta.title}"/>
                     <div class="my-auto max-w-5/6">
-                        <h2 class="text-white text-left font-bold text-3xl inline md:w-full block truncate lowercase leading-none my-3">
+                        <h2 class="text-white text-left font-bold whitespace-normal break-normal text-3xl inline md:w-full block lowercase leading-none my-3">
                             {post.meta.title}
                         </h2>
-                        <h3 class="text-white text-lg block w-full text-base truncate lowercase leading-none my-3 max-w-full">
+                        <h3 class="text-white text-left text-lg block w-full text-base lowercase leading-none whitespace-normal break-normal my-3 max-w-full">
                             {post.meta.abstract}
                         </h3>
                     </div>
@@ -65,10 +65,10 @@
                 class="border-0 flex-col md:flex-row flex scale-100 rounded-lg shadow-none fontcalc h-fit w-full p-5 bg-neutral-800 v-middle group"
             >
                 <div class="my-auto max-w-5/6">
-                    <h2 class="text-white text-left font-bold text-3xl inline md:w-full block truncate lowercase leading-none my-3">
+                    <h2 class="text-white text-left font-bold whitespace-normal break-normal text-3xl inline md:w-full block lowercase leading-none my-3">
                         more coming soon!
                     </h2>
-                    <h3 class="text-white text-lg block w-full text-base truncate lowercase leading-none my-3 max-w-full">
+                    <h3 class="text-white text-left text-lg block w-full text-base lowercase leading-none whitespace-normal break-normal my-3 max-w-full">
                         check back soon to see what i'll write about next :)
                     </h3>
                 </div>

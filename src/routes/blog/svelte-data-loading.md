@@ -7,10 +7,10 @@ abstract: "loading data cybernetically has its perks!"
 so, it turns out that i've been getting my data wrong since i switched to svelte.
 # the old method
 originally, to get around cors, i wrote some api routes that would fetch data from the server. for example, for the projects page, i had written a function called `getProjects` that would fetch the projects from the api route and just return json data. it was pretty simple, and looked something like this:
-```js
+```javascript
 async function getPosts() {
-		const res = await fetch('/api/posts');
-		return await res.json();
+    const res = await fetch('/api/posts');
+    return await res.json();
 }
 ```
 `/api/posts/+server.ts` looked like this:
