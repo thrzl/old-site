@@ -46,7 +46,7 @@
                 <div
                     class="border-0 flex-col md:flex-row flex scale-100 rounded-lg shadow-none fontcalc h-fit w-full p-5 bg-neutral-800 v-middle group"
                 >
-                    <img src="{post.meta.image}" class="-z-20 -mt-5 -ml-5 absolute w-full h-full duration-500 overflow-clip w-32 h-32 m-0 object-cover rounded-lg mr-5 group-hover:scale-[1.05] brightness-70 transition-all" alt="{post.meta.title}"/>
+                    <img src="{post.meta.image}" class="-z-20 -mt-5 -ml-5 absolute w-full h-full duration-500 overflow-clip object-cover rounded-lg mr-5 group-hover:scale-[1.05] brightness-70 transition-all" alt="{post.meta.title}"/>
                     <div class="my-auto max-w-5/6">
                         <h2 class="text-white text-left font-bold text-3xl inline md:w-full block truncate lowercase leading-none my-3">
                             {post.meta.title}
