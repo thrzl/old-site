@@ -108,6 +108,30 @@
 			<section class="mt-8 first:mt-0">
 				<div class="break-inside-avoid">
 					<h2 class="mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal">
+						AWARDS
+					</h2>
+
+					<section class="mb-4 break-inside-avoid">
+						<header>
+							<h3 class="text-2xl font-semibold my-0">
+								<a href="https://hack.indigitous.org/" class="group text-white">
+									#hack2022
+									<span
+										class="inline-block text-gray-550 print:text-black font-normal group-hover:-translate-y-[0.125rem] group-hover:translate-x-[0.125rem] transition duration-500 ease-in-out"
+										>↗</span
+									>
+								</a>
+							</h3>
+							<p class="leading-normal text-md text-gray-650 my-0">October 2022 | 1st place</p>
+						</header>
+						<p class="mt-2 text-md leading-normal">
+							The first hackathon I ever participated in, my church's #hack2022 project involved creating the designs for an app that would guide people through starting their own churches. This was the first time using Figma in an actual project, which was definitely an interesting experience for me, but I picked it up pretty quickly. we ended up winning first place!
+						</p>
+					</section>
+			</section>
+			<section class="mt-8 first:mt-0">
+				<div class="break-inside-avoid">
+					<h2 class="mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal">
 						PROJECTS
 					</h2>
 
