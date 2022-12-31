@@ -114,7 +114,7 @@
 					<section class="mb-4 break-inside-avoid">
 						<header>
 							<h3 class="text-2xl font-semibold my-0">
-								<a href="https://hack.indigitous.org/" class="group text-white">
+								<a href="https://hack.indigitous.org/" class="group text-[#ef4e25]">
 									#hack2022
 									<span
 										class="inline-block text-gray-550 print:text-black font-normal group-hover:-translate-y-[0.125rem] group-hover:translate-x-[0.125rem] transition duration-500 ease-in-out"
