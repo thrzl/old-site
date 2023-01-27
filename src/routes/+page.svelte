@@ -8,7 +8,6 @@ import SpotifyBlurb from "../components/SpotifyBlurb.svelte";
 <div class="text-center bg-black text-white ">
 	<header class="mx-auto min-h-screen flex flex-col items-center justify-center text-white lg:max-w-screen-xl w-screen m-auto">
 		<img
-			width="160px"
 			height="160px"
 			src="/profile.webp"
 			class="rounded-full relative"
